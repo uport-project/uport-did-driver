@@ -10,6 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "uport-lite": "^1.0.2"
+    "did-resolver": "^0.0.4",
+    "uport-did-resolver": "^0.0.2",
+    "muport-did-resolver": "^0.0.4",
+    "ethr-did-resolver": "^0.0.8",
+    "eth-did-resolver": "^0.1.1",
+    "ethereumjs-util": "^5.1.5"
   }
 }
