@@ -14,10 +14,10 @@ muportResolver()
 ethrResolver()
 ethResolver()
 
-app.get('/1.0/dids/*', function (req, res) {
+app.get('/1.0/identifiers/*', function (req, res) {
 
   const url = req.url
-  const regex = /\/1.0\/dids\/(did:.*)/
+  const regex = /\/1.0\/identifiers\/(did:.*)/
   const did = regex.exec(url)[1]
 
   console.log(did)
