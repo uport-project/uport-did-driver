@@ -9,7 +9,7 @@ The file `expressresolver.js` is an small Express Node app acting as a thin wrap
 The following DID methods are supported:
 
 * [ethr](https://github.com/decentralized-identity/ethr-did-resolver)
-* [web](https://github.com/uport-project/web-did-resolver)
+* [web](https://github.com/decentralized-identity/web-did-resolver)
 * [nacl](https://github.com/uport-project/nacl-did)
 
 The resolver currently uses the default Ethereum nodes hosted by [Infura](https://infura.io).
