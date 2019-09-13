@@ -1,12 +1,12 @@
 
 const { Resolver } = require('did-resolver')
 const ethr = require('ethr-did-resolver')
-const web = require ('web-did-resolver')
+const web = require('web-did-resolver').default()
 
 const resolver = new Resolver({
-  ethr,
-  web,
-  https: web // Override a did method type
+    ...ethr.getResolver(),
+    ...web,
+    https : web.web  // Override a did method type
 })
 
 const express = require('express')
@@ -34,3 +34,4 @@ var server = app.listen(8081, function () {
 // did:muport:Qmbrpc3gKtapsL5k6nZuzYvoMQZwMup5qWvss1q4XuaRJd
 // did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
 // did:web:uport.me
+// did:https:gbugy.is
