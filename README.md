@@ -4,13 +4,11 @@ Driver for the uPort DID method to be used in the [Universal Resolver](https://g
 
 <https://hub.docker.com/r/uport/uni-resolver-driver-did-uport/>
 
-The file `expressresolver.js` is an small Express Node app acting as a thin wrapper around the [Javascript DID resolver](https://github.com/uport-project/did-resolver). It listens to port 8081.
+The file `expressresolver.js` is an small Express Node app acting as a thin wrapper around the [Javascript DID resolver](https://github.com/decentralized-identity/did-resolver). It listens to port 8081.
 
 The following DID methods are supported:
 
-* [uPort](https://github.com/uport-project/uport-did-resolver)
-* [µPort](https://github.com/uport-project/muport-did-resolver)
-* [ethr](https://github.com/uport-project/ethr-did-resolver)
-* [eth](https://github.com/uport-project/eth-did-resolver)
+* [ethr](https://github.com/decentralized-identity/ethr-did-resolver)
+* [web](https://github.com/uport-project/web-did-resolver)
 
-The resolver currently uses the default Ethereum and IPFS nodes hosted by [Infura](https://infura.io).
+The resolver currently uses the default Ethereum nodes hosted by [Infura](https://infura.io).

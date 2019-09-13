@@ -1,18 +1,16 @@
 
-const resolve = require('did-resolver')
-const uportResolver = require('uport-did-resolver')
-const muportResolver = require('muport-did-resolver')
-const ethrResolver = require('ethr-did-resolver')
-const ethResolver = require('eth-did-resolver')
+const { Resolver } = require('did-resolver')
+const ethr = require('ethr-did-resolver')
+const web = require ('web-did-resolver')
+
+const resolver = new Resolver({
+  ethr,
+  web,
+  https: web // Override a did method type
+})
 
 const express = require('express')
 const app = express()
-
-// Register resolvers
-uportResolver()
-muportResolver()
-ethrResolver()
-ethResolver()
 
 app.get('/1.0/identifiers/*', function (req, res) {
 
@@ -20,11 +18,11 @@ app.get('/1.0/identifiers/*', function (req, res) {
   const regex = /\/1.0\/identifiers\/(did:.*)/
   const did = regex.exec(url)[1]
 
-  console.log(did)
+  console.log("Resolving DID: "+did)
 
-  resolve(did).then((doc) => {
+  resolver.resolve(did).then((doc) => {
     res.send(doc)
-  })
+  }).catch(err=>{console.error(err); res.status(404).send(err.message)})
 
 })
 
@@ -34,6 +32,5 @@ var server = app.listen(8081, function () {
 
 // Example DIDs
 // did:muport:Qmbrpc3gKtapsL5k6nZuzYvoMQZwMup5qWvss1q4XuaRJd
-// did:eth:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
 // did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
-// did:uport:2omWsSGspY7zhxaG6uHyoGtcYxoGeeohQXz
+// did:web:uport.me
