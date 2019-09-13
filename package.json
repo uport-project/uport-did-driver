@@ -15,6 +15,7 @@
     "did-resolver": "^1.0.0",
     "ethr-did-resolver": "^1.0.1",
     "express": "^4.16.2",
+    "nacl-did": "^1.0.0",
     "web-did-resolver": "^1.0.1"
   }
 }
