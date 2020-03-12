@@ -1,12 +1,12 @@
 
 const { Resolver } = require('did-resolver')
 const ethr = require('ethr-did-resolver')
-const web = require('web-did-resolver').default()
+const web = require('web-did-resolver')
 const nacl = require('nacl-did')
 
 const resolver = new Resolver({
     ...ethr.getResolver(),
-    ...web,
+    ...web.getResolver(),
     https : web.web,  // Override a did method type,
     nacl: nacl.resolver
 })
