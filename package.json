@@ -4,20 +4,33 @@
   "description": "uPort DID method driver",
   "main": "expressresolver.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "docker build -t uport/uni-resolver-driver-did-uport:latest .",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
     "push": "docker push uport/uni-resolver-driver-did-uport"
   },
   "author": "Christian Lundkvist",
   "contributors": [
-    "Andres Junge <andres.junge@consensys.net>"
+    "Andres Junge <andres.junge@consensys.net>",
+    "Mircea Nistor <mircea.nistor@consensys.net>"
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "did-resolver": "^1.0.0",
+    "did-resolver": "^1.1.0",
     "ethr-did-resolver": "^2.2.0",
     "express": "^4.16.2",
-    "nacl-did": "^1.0.0",
+    "nacl-did": "^1.0.1",
     "web-did-resolver": "^1.2.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }

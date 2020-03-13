@@ -29,7 +29,7 @@ const providerConfig = {
 const resolver = new Resolver({
     ...ethr.getResolver(providerConfig),
     ...web.getResolver(),
-    https : web.web,
+    https : web.getResolver().web,
     nacl: nacl.resolver
 })
 
@@ -44,23 +44,42 @@ app.get('/1.0/identifiers/*', function (req, res) {
 
   console.log("Resolving DID: "+did)
 
-  resolver.resolve(did).then((doc) => {
-    res.send(doc)
-  }).catch(err=>{console.error(err); res.status(500).send(err.message)})
+  resolver.resolve(did)
+  .then((doc) => {
+    res.send(doc);
+  }).catch((err) => {
+    if ( err.message.match(/(Unsupported DID method:)|(Invalid DID)|(Not a valid ethr DID:)/) ) {
+      res.status(400).send(err.message)
+    } else {
+      console.error(err);
+      res.status(500).send(err.message);
+    }
+  })
 
 })
 
-var server = app.listen(8081, function () {
+app.server = app.listen(8081, function () {
   console.log("Resolver app listening on port 8081...")
 })
+
+module.exports = app
 
 // Example DIDs
 // did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
 // did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:ropsten:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
 // did:ethr:goerli:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:kovan:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:rsk:testnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:0x3:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:0x5:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
 // did:ethr:0x2a:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
+// did:ethr:0x1f:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
 // did:web:uport.me
-// did:https:gbugy.is
+// did:https:uportlandia.uport.me
 // did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI
-
-
