@@ -2,7 +2,7 @@
 # Dockerfile
 
 FROM node
-MAINTAINER Andres Junge <andres.junge@consensys.net>
+MAINTAINER Mircea NISTOR <mircea.nistor@consensys.net>
 
 USER root
 
