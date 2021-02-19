@@ -23,6 +23,10 @@ const providerConfig = {
     { name: "0x1e", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://did.rsk.co:4444" },
     { name: "rsk:testnet", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://did.testnet.rsk.co:4444" },
     { name: "0x1f", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://did.testnet.rsk.co:4444" },
+    { name: "artis_t1", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "http://rpc.tau1.artis.network" },
+    { name: "0x03c401", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "http://rpc.tau1.artis.network" },
+    { name: "artis_s1", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://rpc.sigma1.artis.network" },
+    { name: "0x03c301", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://rpc.sigma1.artis.network" },
   ]
 }
 
