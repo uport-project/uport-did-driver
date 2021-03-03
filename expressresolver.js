@@ -4,7 +4,7 @@ const ethr = require('ethr-did-resolver')
 const web = require('web-did-resolver')
 const nacl = require('nacl-did')
 
-//this project ID is only useful for ethr-did resolution
+//this shared project ID is only useful for ethr-did resolution
 const infuraId = "ec9c99d75b834bac8dd4bfacad8cfdf7"
 
 const providerConfig = {
@@ -19,21 +19,27 @@ const providerConfig = {
     { name: "0x5", rpcUrl: `https://goerli.infura.io/v3/${infuraId}` },
     { name: "kovan", rpcUrl: `https://kovan.infura.io/v3/${infuraId}` },
     { name: "0x2a", rpcUrl: `https://kovan.infura.io/v3/${infuraId}` },
-    { name: "rsk", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://did.rsk.co:4444" },
-    { name: "0x1e", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://did.rsk.co:4444" },
-    { name: "rsk:testnet", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://did.testnet.rsk.co:4444" },
-    { name: "0x1f", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://did.testnet.rsk.co:4444" },
-    { name: "artis_t1", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "http://rpc.tau1.artis.network" },
-    { name: "0x03c401", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "http://rpc.tau1.artis.network" },
-    { name: "artis_s1", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://rpc.sigma1.artis.network" },
-    { name: "0x03c301", registry: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b", rpcUrl: "https://rpc.sigma1.artis.network" },
+    { name: "rsk", rpcUrl: "https://did.rsk.co:4444" },
+    { name: "0x1e", rpcUrl: "https://did.rsk.co:4444" },
+    { name: "rsk:testnet", rpcUrl: "https://did.testnet.rsk.co:4444" },
+    { name: "0x1f", rpcUrl: "https://did.testnet.rsk.co:4444" },
+    { name: "artis_t1", rpcUrl: "http://rpc.tau1.artis.network" },
+    { name: "0x03c401", rpcUrl: "http://rpc.tau1.artis.network" },
+    { name: "artis_s1", rpcUrl: "https://rpc.sigma1.artis.network" },
+    { name: "0x03c301", rpcUrl: "https://rpc.sigma1.artis.network" },
+    { name: "matic", rpcUrl: "https://rpc-mainnet.maticvigil.com/" },
+    { name: "0x89", rpcUrl: "https://rpc-mainnet.maticvigil.com/" },
+    { name: "maticmum", rpcUrl: "https://rpc-mumbai.maticvigil.com/" },
+    { name: "0x13881", rpcUrl: "https://rpc-mumbai.maticvigil.com/" },
   ]
 }
 
 const resolver = new Resolver({
     ...ethr.getResolver(providerConfig),
     ...web.getResolver(),
+    //deprecated, kept for backward compatibility
     https : web.getResolver().web,
+    //deprecated, kept for backward compatibility
     nacl: nacl.resolver
 })
 
@@ -85,7 +91,4 @@ module.exports = app
 // did:ethr:0x2a:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
 // did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
 // did:ethr:0x1f:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736
-// did:web:uport.me
-// did:web:data-vault.eu:u:zi4xgcHtYo7fh_KAURaO1beG2v6WN9ImVnQ30CBDEJjLrw
-// did:https:uportlandia.uport.me
-// did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI
+// did:web:did.actor:alice
