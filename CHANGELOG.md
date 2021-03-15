@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/uport-project/uport-did-driver/compare/2.0.0...2.0.1) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ci:** update release process ([#14](https://github.com/uport-project/uport-did-driver/issues/14)) ([2d91b5a](https://github.com/uport-project/uport-did-driver/commit/2d91b5ac9240661f32c9bbefcf8cd33439a673cd))
+* **ci:** update release process for npm ([98ad094](https://github.com/uport-project/uport-did-driver/commit/98ad0944823ce22efb29f85b0d4275dd74c4b144))
+
 # [2.0.0](https://github.com/uport-project/uport-did-driver/compare/v1.4.0...2.0.0) (2021-03-15)
 
 
