@@ -1,4 +1,4 @@
-var app = require('../src/app')
+var app = require('../app')
 var request = require('supertest')
 
 describe('did:ethr driver', () => {
@@ -15,7 +15,6 @@ describe('did:ethr driver', () => {
   })
 
   describe('responds with known did doc for ', () => {
-    //this should fail once the ethr-did-resolver is updated to the latest DID doc format
     it('did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b', async () => {
       expect.assertions(2)
       const did = 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b'
@@ -39,6 +38,44 @@ describe('did:ethr driver', () => {
               id: 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller',
               controller: 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b',
               type: 'EcdsaSecp256k1RecoveryMethod2020'
+            }
+          ]
+        }
+      })
+    })
+
+    it('did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71', async () => {
+      expect.assertions(2)
+      const did = 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71'
+      const response = await request(app).get(`/1.0/identifiers/${did}`)
+      expect(response.status).toBe(200)
+      expect(response.body).toEqual({
+        didDocumentMetadata: {},
+        didResolutionMetadata: {
+          contentType: 'application/did+ld+json'
+        },
+        didDocument: {
+          '@context': [
+            'https://www.w3.org/ns/did/v1',
+            'https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld'
+          ],
+          authentication: [
+            'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
+            'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey'
+          ],
+          id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
+          verificationMethod: [
+            {
+              blockchainAccountId: '0xC662e6c5F91B9FcD22D7FcafC80Cf8b640aed247@eip155:1',
+              controller: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
+              id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
+              type: 'EcdsaSecp256k1RecoveryMethod2020'
+            },
+            {
+              controller: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
+              id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey',
+              publicKeyHex: '0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
+              type: 'EcdsaSecp256k1VerificationKey2019'
             }
           ]
         }
@@ -143,6 +180,40 @@ describe('did:ethr driver', () => {
       const did = 'did:ethr:0x1f:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
       const response = await request(app).get(`/1.0/identifiers/${did}`)
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    })
+  })
+
+  describe('responds with error for', () => {
+    it('unknown ethr network', async () => {
+      expect.assertions(2)
+      const did = 'did:ethr:unknown:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+      const response = await request(app).get(`/1.0/identifiers/${did}`)
+      expect(response.status).toBe(200)
+      expect(response.body.didResolutionMetadata).toEqual({
+        error: 'unknownNetwork',
+        message: 'The DID resolver does not have a configuration for network: unknown'
+      })
+    })
+
+    it('missing address mainnet ethr DID', async () => {
+      expect.assertions(2)
+      const did = 'did:ethr:0x1:'
+      const response = await request(app).get(`/1.0/identifiers/${did}`)
+      expect(response.status).toBe(200)
+      expect(response.body.didResolutionMetadata).toEqual({
+        error: 'invalidDid'
+      })
+    })
+
+    it('bad address generic ethr DID', async () => {
+      expect.assertions(2)
+      const did = 'did:ethr:0x1234'
+      const response = await request(app).get(`/1.0/identifiers/${did}`)
+      expect(response.status).toBe(200)
+      expect(response.body.didResolutionMetadata).toEqual({
+        error: 'invalidDid',
+        message: 'Not a valid did:ethr: 0x1234'
+      })
     })
   })
 })
