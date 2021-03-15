@@ -1,8 +1,9 @@
 
 # Dockerfile
 
-FROM node
-MAINTAINER Mircea NISTOR <mircea.nistor@consensys.net>
+FROM node:12.14.0
+LABEL maintainer="Mircea NISTOR <mircea.nistor@mesh.xyz>"
+LABEL repository="git@github.com:uport-project/uport-did-driver.git"
 
 USER root
 
