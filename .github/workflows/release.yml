@@ -1,0 +1,51 @@
+name: Build, Test and Publish
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'master'
+jobs:
+  build-test-publish:
+    env:
+      GH_TOKEN: ${{secrets.GH_TOKEN}}
+      GH_USER: ${{secrets.GH_USER}}
+      GH_EMAIL: ${{secrets.GH_EMAIL}}
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - name: Build the tagged Docker image
+        run: yarn build
+
+      - name: setup git coordinates
+        run: |
+          git remote set-url origin https://uport-project:$GH_TOKEN@github.com/uport-project/uport-did-driver.git
+          git config user.name $GH_USER
+          git config user.email $GH_EMAIL
+      - name: Login to DockerHub Registry
+        run: echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
+
+      - name: Push the tagged Docker image
+        if: github.ref == 'refs/heads/master'
+        run: yarn release
+        
