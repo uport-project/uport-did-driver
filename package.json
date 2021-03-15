@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "jest",
-    "build": "docker build -t uport/uni-resolver-driver-did-uport:latest .",
+    "build:latest": "docker build -t uport/uni-resolver-driver-did-uport:latest .",
+    "build:tag": "docker build -t uport/uni-resolver-driver-did-uport:$(echo \"console.log(require('./package.json').version)\" | node) .",
+    "build:all": "npm run build:latest && npm run build:tag",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
     "push": "docker push uport/uni-resolver-driver-did-uport"
