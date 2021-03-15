@@ -1,19 +1,16 @@
 {
-  "extends": [
-    "config:base",
-    "group:allNonMajor"
-  ],
+  "extends": ["config:base", "group:allNonMajor"],
   "labels": ["maintenance"],
   "packageRules": [
     {
-      "packagePatterns": [ "jest", "sinon", "codecov", "lint", "jsdoc", "bundle", "prettier", "webpack", "typescript" ],
+      "packagePatterns": ["jest", "sinon", "codecov", "lint", "jsdoc", "bundle", "prettier", "webpack", "typescript"],
       "groupName": "builders-and-testers",
       "automerge": true,
       "automergeType": "branch",
       "schedule": ["before 5am"]
     },
     {
-      "packagePatterns": [ "semantic", "commitlint" ],
+      "packagePatterns": ["semantic", "commitlint"],
       "groupName": "automation",
       "automerge": true,
       "automergeType": "branch",
