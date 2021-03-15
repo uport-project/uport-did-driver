@@ -1,0 +1,16 @@
+{
+  "tagFormat": "${version}",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/changelog", {
+      "changelogFile": "CHANGELOG.md"
+    }],
+    ["@semantic-release/exec", {
+      "dockerPush": "echo 'yarn push'"
+    }],
+    "@semantic-release/git",
+    "@semantic-release/github"
+  ],
+  "branch": "master"
+}

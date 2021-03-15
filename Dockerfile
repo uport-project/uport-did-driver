@@ -6,8 +6,8 @@ USER root
 
 # add source files
 RUN mkdir "uport-did-driver"
-ADD LICENSE package.json package-lock.json README.md src/ uport-did-driver/
-RUN cd uport-did-driver && npm i
+ADD LICENSE package.json yarn.lock README.md src/ uport-did-driver/
+RUN cd uport-did-driver && yarn install --frozen-lockfile
 
 EXPOSE 8081
 
