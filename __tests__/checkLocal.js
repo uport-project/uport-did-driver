@@ -1,18 +1,7 @@
-var app = require('../expressresolver')
+var app = require('../src/expressresolver')
 var request = require('supertest')
 
 describe('uport-did-driver responds with did doc for', () => {
-
-  it('did:ethr', (done) => {
-    const did = "did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736"
-    request(app)
-      .get(`/1.0/identifiers/${did}`)
-      .expect((res) => {
-        expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
-      })
-      .expect(200, done);
-  });
 
   it('did:nacl', (done) => {
     const did = "did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI"
@@ -20,18 +9,18 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
 
   it('did:web', (done) => {
-    const did = "did:web:uport.me"
+    const did = "did:web:did.actor:alice"
     request(app)
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -46,34 +35,6 @@ describe('uport-did-driver responds with did doc for', () => {
       })
       .expect(200, done);
   });
-});
-
-describe('uport-did-driver responds with known did doc for', () => {
-
-  //this should fail once the ethr-did-resolver is updated to the latest DID doc format
-  it('did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b', (done) => {
-    const did = "did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b"
-    request(app)
-      .get(`/1.0/identifiers/${did}`)
-      .expect((res) => {
-        expect(res.body).toEqual({
-          "@context": "https://w3id.org/did/v1",
-          authentication: [{
-              publicKey: "did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#owner",
-              type: "Secp256k1SignatureAuthentication2018"
-          }],
-          id: "did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b",
-          publicKey: [{
-            ethereumAddress: "0xdca7ef03e98e0dc2b855be647c39abe984fcf21b",
-            id: "did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#owner",
-            owner: "did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b",
-            type: "Secp256k1VerificationKey2018"
-          }]
-       });
-      })
-      .expect(200, done);
-  });
-
 });
 
 describe('uport-did-driver responds with HTTP error', () => {
@@ -134,7 +95,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -145,7 +106,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -156,7 +117,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -167,7 +128,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -189,7 +150,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -200,7 +161,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -211,7 +172,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -222,7 +183,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -233,7 +194,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -244,7 +205,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -255,7 +216,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -266,7 +227,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
@@ -277,7 +238,7 @@ describe('uport-did-driver responds with did doc for', () => {
       .get(`/1.0/identifiers/${did}`)
       .expect((res) => {
         expect(res.body.id).toEqual(did);
-        expect(res.body).toHaveProperty('publicKey')
+        expect(res.body).toHaveProperty('verificationMethod')
       })
       .expect(200, done);
   });
