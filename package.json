@@ -7,9 +7,8 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "jest",
-    "build": "docker build -t uport/uni-resolver-driver-did-uport:latest . && docker build -t uport/uni-resolver-driver-did-uport:$(echo \"console.log(require('./package.json').version)\" | node) .",
-    "prepublishOnly": "yarn build",
-    "push": "docker push uport/uni-resolver-driver-did-uport:$(echo \"console.log(require('./package.json').version)\" | node) && docker push uport/uni-resolver-driver-did-uport:latest",
+    "build": "docker build -t uport/uni-resolver-driver-did-uport:latest -t uport/uni-resolver-driver-did-uport:$(echo \"console.log(require('./package.json').version)\" | node) .",
+    "push": "docker push uport/uni-resolver-driver-did-uport",
     "release": "semantic-release --debug"
   },
   "author": "Christian Lundkvist",

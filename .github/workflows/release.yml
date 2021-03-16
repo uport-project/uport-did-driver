@@ -36,9 +36,6 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: yarn install --frozen-lockfile
       - run: yarn test
-      - name: Build the tagged Docker image
-        run: yarn build
-
       - name: setup git coordinates
         run: |
           git remote set-url origin https://uport-project:$GH_TOKEN@github.com/uport-project/uport-did-driver.git
