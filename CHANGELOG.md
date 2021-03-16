@@ -1,3 +1,10 @@
+## [2.0.7](https://github.com/uport-project/uport-did-driver/compare/2.0.6...2.0.7) (2021-03-16)
+
+
+### Bug Fixes
+
+* **ci:** remove unused npm token ([c172dbc](https://github.com/uport-project/uport-did-driver/commit/c172dbc09287125525fbae27167b878a19512e91))
+
 ## [2.0.6](https://github.com/uport-project/uport-did-driver/compare/2.0.5...2.0.6) (2021-03-16)
 
 
