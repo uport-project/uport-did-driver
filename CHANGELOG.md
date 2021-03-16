@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/uport-project/uport-did-driver/compare/2.0.2...2.0.3) (2021-03-16)
+
+
+### Bug Fixes
+
+* **ci:** update release process for docker push ([b307145](https://github.com/uport-project/uport-did-driver/commit/b307145706e332b6439fe69498e71fc5719bc24e))
+
 ## [2.0.2](https://github.com/uport-project/uport-did-driver/compare/2.0.1...2.0.2) (2021-03-15)
 
 
