@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/uport-project/uport-did-driver/compare/2.0.3...2.0.4) (2021-03-16)
+
+
+### Bug Fixes
+
+* **ci:** only push version tagged image ([b6bbc6b](https://github.com/uport-project/uport-did-driver/commit/b6bbc6b58809c3b72eb86a9335fc761892345fb3))
+
 ## [2.0.3](https://github.com/uport-project/uport-did-driver/compare/2.0.2...2.0.3) (2021-03-16)
 
 
