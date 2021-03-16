@@ -9,7 +9,7 @@
     "test": "jest",
     "build": "docker build -t uport/uni-resolver-driver-did-uport:latest -t uport/uni-resolver-driver-did-uport:$(echo \"console.log(require('./package.json').version)\" | node) .",
     "prepublishOnly": "yarn build",
-    "push": "docker push uport/uni-resolver-driver-did-uport",
+    "push": "docker push uport/uni-resolver-driver-did-uport:$(echo \"console.log(require('./package.json').version)\" | node) && docker push uport/uni-resolver-driver-did-uport:latest",
     "release": "semantic-release --debug"
   },
   "author": "Christian Lundkvist",
