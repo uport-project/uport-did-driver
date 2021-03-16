@@ -1,3 +1,10 @@
+## [2.0.8](https://github.com/uport-project/uport-did-driver/compare/2.0.7...2.0.8) (2021-03-16)
+
+
+### Bug Fixes
+
+* copy correct sourcefiles for entrypoint to work ([9271cbc](https://github.com/uport-project/uport-did-driver/commit/9271cbceef7ab53670888c7ae6d999593781d29a))
+
 ## [2.0.7](https://github.com/uport-project/uport-did-driver/compare/2.0.6...2.0.7) (2021-03-16)
 
 
