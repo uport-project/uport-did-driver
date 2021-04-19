@@ -3,6 +3,22 @@
   "labels": ["maintenance"],
   "packageRules": [
     {
+      "packagePatterns": ["did-resolver", "ethr-did-resolver", "web-did-resolver"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "resolvers_minor",
+      "automerge": true,
+      "automergeType": "branch",
+      "commitMessagePrefix": "fix(deps): "
+    },
+    {
+      "packagePatterns": ["did-resolver", "ethr-did-resolver", "web-did-resolver"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "resolvers_major",
+      "automerge": true,
+      "automergeType": "branch",
+      "commitMessagePrefix": "feat(deps): "
+    },
+    {
       "packagePatterns": ["jest", "sinon", "codecov", "lint", "jsdoc", "bundle", "prettier", "webpack", "typescript"],
       "groupName": "builders-and-testers",
       "automerge": true,
