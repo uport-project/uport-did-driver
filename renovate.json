@@ -9,6 +9,18 @@
   "packageRules": [
     {
       "packagePatterns": [
+        "did"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "resolvers_minor",
+      "automerge": true,
+      "commitMessagePrefix": "fix(deps): "
+    },
+    {
+      "packagePatterns": [
         "jest",
         "sinon",
         "codecov",
@@ -46,8 +58,7 @@
         "patch"
       ],
       "automerge": true,
-      "automergeType": "branch",
-      "commitMessagePrefix": "fix(deps): "
+      "automergeType": "branch"
     }
   ]
 }
