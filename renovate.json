@@ -1,47 +1,74 @@
 {
-  "extends": ["config:base", "group:allNonMajor"],
-  "labels": ["maintenance"],
+  "extends": [
+    "config:base",
+    "group:allNonMajor"
+  ],
+  "labels": [
+    "maintenance"
+  ],
   "packageRules": [
     {
-      "packagePatterns": ["did-resolver"],
-      "matchUpdateTypes": ["minor", "patch"],
+      "packagePatterns": [
+        "did"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "groupName": "resolvers_minor",
       "automerge": true,
       "automergeType": "branch",
       "commitMessagePrefix": "fix(deps): "
     },
     {
-      "packagePatterns": ["did-resolver"],
-      "matchUpdateTypes": ["major"],
-      "groupName": "resolvers_major",
-      "automerge": true,
-      "automergeType": "branch",
-      "commitMessagePrefix": "feat(deps): "
-    },
-    {
-      "packagePatterns": ["jest", "sinon", "codecov", "lint", "jsdoc", "bundle", "prettier", "webpack", "typescript"],
+      "packagePatterns": [
+        "jest",
+        "sinon",
+        "codecov",
+        "lint",
+        "jsdoc",
+        "bundle",
+        "prettier",
+        "webpack",
+        "typescript"
+      ],
       "groupName": "builders-and-testers",
       "automerge": true,
       "automergeType": "branch",
-      "schedule": ["before 5am"]
+      "schedule": [
+        "before 5am"
+      ]
     },
     {
-      "packagePatterns": ["semantic", "commitlint"],
+      "packagePatterns": [
+        "semantic",
+        "commitlint"
+      ],
       "groupName": "automation",
       "automerge": true,
       "automergeType": "branch",
-      "schedule": ["before 5am"]
+      "schedule": [
+        "before 5am"
+      ]
     },
     {
-      "depTypeList": ["devDependencies"],
+      "depTypeList": [
+        "devDependencies"
+      ],
       "groupName": "devDeps",
       "automerge": true,
       "automergeType": "branch",
-      "schedule": ["before 5am"]
+      "schedule": [
+        "before 5am"
+      ]
     },
     {
-      "updateTypes": ["minor", "patch"],
-      "automerge": true
+      "updateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "automergeType": "branch"
     }
   ]
 }
