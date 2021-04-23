@@ -23,11 +23,11 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "did-resolver": "^3.1.0",
-    "ethr-did-resolver": "^4.3.3",
-    "express": "^4.16.2",
-    "nacl-did": "^1.0.1",
-    "web-did-resolver": "^2.0.4"
+    "did-resolver": "3.1.0",
+    "ethr-did-resolver": "4.3.3",
+    "express": "4.16.2",
+    "nacl-did": "1.0.1",
+    "web-did-resolver": "2.0.4"
   },
   "devDependencies": {
     "@semantic-release/changelog": "5.0.1",
