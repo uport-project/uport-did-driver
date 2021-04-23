@@ -34,10 +34,7 @@
       ],
       "groupName": "builders-and-testers",
       "automerge": true,
-      "automergeType": "branch",
-      "schedule": [
-        "before 5am"
-      ]
+      "automergeType": "branch"
     },
     {
       "packagePatterns": [
@@ -46,10 +43,7 @@
       ],
       "groupName": "automation",
       "automerge": true,
-      "automergeType": "branch",
-      "schedule": [
-        "before 5am"
-      ]
+      "automergeType": "branch"
     },
     {
       "depTypeList": [
@@ -57,10 +51,7 @@
       ],
       "groupName": "devDeps",
       "automerge": true,
-      "automergeType": "branch",
-      "schedule": [
-        "before 5am"
-      ]
+      "automergeType": "branch"
     },
     {
       "updateTypes": [
