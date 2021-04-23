@@ -31,6 +31,7 @@ describe('did:ethr driver', () => {
             'https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld'
           ],
           authentication: ['did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller'],
+          assertionMethod: ['did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller'],
           id: 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b',
           verificationMethod: [
             {
@@ -41,6 +42,39 @@ describe('did:ethr driver', () => {
             }
           ]
         }
+      })
+    })
+
+    it('did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388?versionId=0', async () => {
+      expect.assertions(2)
+      const did = 'did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388?versionId=0'
+      const response = await request(app).get(`/1.0/identifiers/${did}`)
+      expect(response.status).toBe(200)
+      expect(response.body).toEqual({
+        didDocumentMetadata: {
+          nextVersionId: '12090175',
+          nextUpdate: '2021-03-22T18:14:29Z',
+        },
+        didResolutionMetadata: {
+          contentType: 'application/did+ld+json',
+        },
+        didDocument: {
+          '@context': [
+            'https://www.w3.org/ns/did/v1',
+            'https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld',
+          ],
+          id: 'did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388',
+          verificationMethod: [
+            {
+              id: 'did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller',
+              type: 'EcdsaSecp256k1RecoveryMethod2020',
+              controller: 'did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388',
+              blockchainAccountId: '0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1',
+            },
+          ],
+          authentication: ['did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller'],
+          assertionMethod: ['did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller'],
+        },
       })
     })
 
@@ -60,6 +94,10 @@ describe('did:ethr driver', () => {
             'https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld'
           ],
           authentication: [
+            'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
+            'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey'
+          ],
+          assertionMethod: [
             'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
             'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey'
           ],
