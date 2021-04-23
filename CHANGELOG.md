@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/uport-project/uport-did-driver/compare/2.0.9...2.1.0) (2021-04-23)
+
+
+### Features
+
+* **deps:** bump resolvers ([4f7e1d2](https://github.com/uport-project/uport-did-driver/commit/4f7e1d201937c99eaa6d09214a65363955eb0e35))
+
 ## [2.0.9](https://github.com/uport-project/uport-did-driver/compare/2.0.8...2.0.9) (2021-04-19)
 
 
