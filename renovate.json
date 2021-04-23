@@ -8,8 +8,8 @@
   ],
   "packageRules": [
     {
-      "packagePatterns": [
-        "did"
+      "matchPackagePatterns": [
+        ".*did.*"
       ],
       "matchUpdateTypes": [
         "minor",
@@ -17,35 +17,11 @@
       ],
       "groupName": "resolvers_minor",
       "automerge": true,
-      "commitMessagePrefix": "fix(deps): "
+      "commitMessagePrefix": "fix(deps): ",
+      "rangeStrategy": "bump"
     },
     {
-      "packagePatterns": [
-        "jest",
-        "sinon",
-        "codecov",
-        "lint",
-        "jsdoc",
-        "bundle",
-        "prettier",
-        "webpack",
-        "typescript"
-      ],
-      "groupName": "builders-and-testers",
-      "automerge": true,
-      "automergeType": "branch"
-    },
-    {
-      "packagePatterns": [
-        "semantic",
-        "commitlint"
-      ],
-      "groupName": "automation",
-      "automerge": true,
-      "automergeType": "branch"
-    },
-    {
-      "depTypeList": [
+      "matchDepTypes": [
         "devDependencies"
       ],
       "groupName": "devDeps",
@@ -53,7 +29,7 @@
       "automergeType": "branch"
     },
     {
-      "updateTypes": [
+      "matchUpdateTypes": [
         "minor",
         "patch"
       ],
