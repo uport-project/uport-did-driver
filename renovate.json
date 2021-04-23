@@ -3,7 +3,7 @@
   "labels": ["maintenance"],
   "packageRules": [
     {
-      "packagePatterns": ["did-resolver", "ethr-did-resolver", "web-did-resolver"],
+      "packagePatterns": ["did-resolver"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "resolvers_minor",
       "automerge": true,
@@ -11,7 +11,7 @@
       "commitMessagePrefix": "fix(deps): "
     },
     {
-      "packagePatterns": ["did-resolver", "ethr-did-resolver", "web-did-resolver"],
+      "packagePatterns": ["did-resolver"],
       "matchUpdateTypes": ["major"],
       "groupName": "resolvers_major",
       "automerge": true,
