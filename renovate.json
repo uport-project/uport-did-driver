@@ -11,10 +11,6 @@
       "matchPackagePatterns": [
         ".*did.*"
       ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
       "groupName": "resolvers_minor",
       "automerge": true,
       "commitMessagePrefix": "fix(deps): ",
