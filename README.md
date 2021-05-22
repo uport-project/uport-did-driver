@@ -38,15 +38,13 @@ curl -X GET http://localhost:8081/1.0/identifiers/did:nacl:Md8JiMIwsapml_FtQ2ngn
 * `did:ethr:goerli:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:ethr:kovan:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
-* `did:ethr:rsk:testnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:ethr:0x3:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:ethr:0x5:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:ethr:0x2a:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
-* `did:ethr:0x1f:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
-* `did:web:uport.me`
-* `did:web:data-vault.eu:u:zi4xgcHtYo7fh_KAURaO1beG2v6WN9ImVnQ30CBDEJjLrw`
+* `did:web:pulsar.veramo.io`
+* `did:web:did.actor:alice`
 * `did:https:uportlandia.uport.me`
 * `did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI`

@@ -11,11 +11,6 @@ const providerConfig = {
   networks: [
     { name: 'rsk', chainId: 30, rpcUrl: 'https://did.rsk.co:4444' },
     {
-      name: 'rsk:testnet',
-      chainId: 31,
-      rpcUrl: 'https://did.testnet.rsk.co:4444'
-    },
-    {
       chainId: '0x03c301',
       rpcUrl: 'https://rpc.sigma1.artis.network'
     },
