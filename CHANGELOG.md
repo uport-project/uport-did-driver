@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/uport-project/uport-did-driver/compare/2.1.1...2.1.2) (2021-05-22)
+
+
+### Bug Fixes
+
+* **build:** remove did:ethr:rsk:testnet config, tests and examples ([5cdca0b](https://github.com/uport-project/uport-did-driver/commit/5cdca0b2f3a8ed7510f2a4832b8f10a5c5f323ff))
+
 ## [2.1.1](https://github.com/uport-project/uport-did-driver/compare/2.1.0...2.1.1) (2021-04-25)
 
 
