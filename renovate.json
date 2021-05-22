@@ -6,31 +6,30 @@
   "labels": [
     "maintenance"
   ],
+  "automergeType": "branch",
+  "automerge": true,
   "packageRules": [
     {
       "matchPackagePatterns": [
-        ".*did.*"
+        "did"
       ],
-      "groupName": "resolvers_minor",
-      "automerge": true,
-      "commitMessagePrefix": "fix(deps): ",
-      "rangeStrategy": "bump"
+      "matchUpdateTypes": [
+        "bump",
+        "patch",
+        "minor",
+        "major"
+      ],
+      "groupName": "did-dependencies",
+      "commitMessagePrefix": "fix(deps):"
     },
     {
       "matchDepTypes": [
         "devDependencies"
       ],
       "groupName": "devDeps",
-      "automerge": true,
-      "automergeType": "branch"
-    },
-    {
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "automerge": true,
-      "automergeType": "branch"
+      "schedule": [
+        "before 5am on Monday"
+      ]
     }
   ]
 }
