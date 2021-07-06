@@ -15,18 +15,18 @@ describe('uport-did-driver responds with did doc for', () => {
     })
   })
 
-  it('responds with didResolutionResult for did:https:uportlandia.uport.me', async () => {
-    expect.assertions(5)
-    const did = 'did:https:uportlandia.uport.me'
-    const response = await request(app).get(`/1.0/identifiers/${did}`)
-    expect(response.status).toBe(200)
-    expect(response.body).toHaveProperty('didDocument')
-    expect(response.body.didDocument).toHaveProperty('publicKey')
-    expect(response.body).toHaveProperty('didDocumentMetadata')
-    expect(response.body.didResolutionMetadata).toEqual({
-      contentType: 'application/did+ld+json'
-    })
-  })
+//  it('responds with didResolutionResult for did:https:uportlandia.uport.me', async () => {
+//    expect.assertions(5)
+//    const did = 'did:https:uportlandia.uport.me'
+//    const response = await request(app).get(`/1.0/identifiers/${did}`)
+//    expect(response.status).toBe(200)
+//    expect(response.body).toHaveProperty('didDocument')
+//    expect(response.body.didDocument).toHaveProperty('publicKey')
+//    expect(response.body).toHaveProperty('didDocumentMetadata')
+//    expect(response.body.didResolutionMetadata).toEqual({
+//      contentType: 'application/did+ld+json'
+//    })
+//  })
 })
 
 describe('uport-did-driver responds with error', () => {

@@ -18,16 +18,16 @@ const providerConfig = {
       chainId: '0x03c401',
       rpcUrl: 'https://rpc.tau1.artis.network'
     },
-    {
-      name: 'matic',
-      chainId: 137,
-      rpcUrl: 'https://rpc-mainnet.matic.network'
-    },
-    {
-      name: 'maticmum',
-      chainId: 80001,
-      rpcUrl: 'https://rpc-mumbai.matic.today'
-    }
+//    {
+//      name: 'matic',
+//      chainId: 137,
+//      rpcUrl: 'https://rpc-mainnet.matic.network'
+//    },
+//    {
+//      name: 'maticmum',
+//      chainId: 80001,
+//      rpcUrl: 'https://rpc-mumbai.matic.today'
+//    }
   ]
 }
 
@@ -35,7 +35,6 @@ const resolver = new Resolver(
   {
     ...ethr.getResolver(providerConfig),
     ...web.getResolver(),
-    https: web.getResolver().web
   },
   {
     legacyResolvers: {

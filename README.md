@@ -11,7 +11,6 @@ The following DID methods are supported:
 * [ethr](https://github.com/decentralized-identity/ethr-did-resolver)
 * [web](https://github.com/decentralized-identity/web-did-resolver)
 * [nacl](https://github.com/uport-project/nacl-did) (DEPRECATED, please use `did:key` instead)
-* [https](https://github.com/decentralized-identity/web-did-resolver) (DEPRECATED, please use `did:web` instead)
 
 ## Curl Tests
 
@@ -46,5 +45,4 @@ curl -X GET http://localhost:8081/1.0/identifiers/did:nacl:Md8JiMIwsapml_FtQ2ngn
 * `did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`
 * `did:web:pulsar.veramo.io`
 * `did:web:did.actor:alice`
-* `did:https:uportlandia.uport.me`
 * `did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI`
