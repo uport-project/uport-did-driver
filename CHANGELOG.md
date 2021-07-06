@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/uport-project/uport-did-driver/compare/2.1.2...2.1.3) (2021-07-06)
+
+
+### Bug Fixes
+
+* remove did:ethr:matic and did:https config, tests and examples ([8329722](https://github.com/uport-project/uport-did-driver/commit/8329722bccb6414460ae5c26d8495417116e9e1d))
+
 ## [2.1.2](https://github.com/uport-project/uport-did-driver/compare/2.1.1...2.1.2) (2021-05-22)
 
 
