@@ -18,6 +18,12 @@ const providerConfig = {
       chainId: '0x03c401',
       rpcUrl: 'https://rpc.tau1.artis.network'
     },
+    {
+      name: 'volta',
+      chainId: '73799',
+      rpcUrl: 'https://volta-rpc.energyweb.org',
+      registry: '0xc15d5a57a8eb0e1dcbe5d88b8f9a82017e5cc4af',
+    },
 //    {
 //      name: 'matic',
 //      chainId: 137,
