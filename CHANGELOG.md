@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/uport-project/uport-did-driver/compare/2.1.4...2.2.0) (2021-09-06)
+
+
+### Features
+
+* add EnergyWebFoundation Volta network ([#41](https://github.com/uport-project/uport-did-driver/issues/41)) ([325b33b](https://github.com/uport-project/uport-did-driver/commit/325b33ba6553a55a8675ba702de1fdd1feae9d07))
+
 ## [2.1.4](https://github.com/uport-project/uport-did-driver/compare/2.1.3...2.1.4) (2021-07-06)
 
 
