@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/uport-project/uport-did-driver/compare/2.2.0...2.2.1) (2021-11-03)
+
+
+### Bug Fixes
+
+* **ci:** node version ([#51](https://github.com/uport-project/uport-did-driver/issues/51)) ([06b5737](https://github.com/uport-project/uport-did-driver/commit/06b5737553cfb763e167c0c8785808417325ee07))
+
 # [2.2.0](https://github.com/uport-project/uport-did-driver/compare/2.1.4...2.2.0) (2021-09-06)
 
 
