@@ -2277,15 +2277,20 @@ dezalgo@^1.0.0:
     asap "^2.0.0"
     wrappy "1"
 
-did-resolver@3.1.0, did-resolver@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.1.0.tgz#84f0e3d16abe9711dc04c34a5a0e2f63868c9611"
-  integrity sha512-uf3/4LfHoDn3Ek8bFegO72OemHMytBhAkud6CA1HlB5I0iVwrCpG4oh+DA6DXUuBdhrA0cY4cGz1D0VNDTlgnw==
+did-resolver@3.1.3, did-resolver@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.1.3.tgz#ed530c9daa2c9925f85e9eabf258e51960db7e70"
+  integrity sha512-ab8y90tSiDkTdfddXRC9Qcb1QSd568aC6+OgFTrcE4rs1vQAZOil+VqXHDu+Ff/UvhxlckPO8oJtp86iICZG0w==
 
 did-resolver@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-1.1.0.tgz#27a63b6f2aa8dee3d622cd8b8b47360661e24f1e"
   integrity sha512-Q02Sc5VuQnJzzR8fQ/DzyCHiYb31WpQdocOsxppI66wwT4XalYRDeCr3a48mL6sYPQo76AkBh0mxte9ZBuQzxA==
+
+did-resolver@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.1.0.tgz#84f0e3d16abe9711dc04c34a5a0e2f63868c9611"
+  integrity sha512-uf3/4LfHoDn3Ek8bFegO72OemHMytBhAkud6CA1HlB5I0iVwrCpG4oh+DA6DXUuBdhrA0cY4cGz1D0VNDTlgnw==
 
 diff-sequences@^27.0.6:
   version "27.0.6"
@@ -2474,10 +2479,10 @@ ethr-did-registry@^0.0.3:
   resolved "https://registry.yarnpkg.com/ethr-did-registry/-/ethr-did-registry-0.0.3.tgz#f363d2c73cb9572b57bd7a5c9c90c88485feceb5"
   integrity sha512-4BPvMGkxAK9vTduCq6D5b8ZqjteD2cvDIPPriXP6nnmPhWKFSxypo+AFvyQ0omJGa0cGTR+dkdI/8jiF7U/qaw==
 
-ethr-did-resolver@4.3.4:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-4.3.4.tgz#f3e9e51a450abb0fe77d12fa36e9f120b5b94f6b"
-  integrity sha512-xx9rjjBf8t2pSUyciDDXv99D66YIpKH29bufbEYyOds6IJSa5C7xeql4MSYz6zNtAAtvNoj9AYhg6FbBkeQmxg==
+ethr-did-resolver@4.3.5:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-4.3.5.tgz#430bb0c355302e4e5662a1ab768737312a219c99"
+  integrity sha512-BQO7PQwuqqczK+4AWQhys/sgegDVIFr6+lSoSYXlIbG0oRH0l7PkSuf7VEFKclEJ3JlJ1t9kjDIdj7Ba7euTJg==
   dependencies:
     "@ethersproject/abi" "^5.1.0"
     "@ethersproject/abstract-signer" "^5.1.0"
@@ -6179,13 +6184,13 @@ wcwidth@^1.0.0:
   dependencies:
     defaults "^1.0.3"
 
-web-did-resolver@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.4.tgz#5a26cc96b1c6924191687ecc8cdb2ce5ef66805b"
-  integrity sha512-PORpoA4P0I3m0cLJX2IIDZ0gMKgC1PjS8DuDeg9/JCdIlFiXrZCyTG1hxvw4a4vhDKr0sZKSZL1pQDXTgqLm8w==
+web-did-resolver@2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.8.tgz#9863cb873b10667a72673f571fa48e6bcecc3e11"
+  integrity sha512-K85NgK3nto5awjBX/5uD9+ZSIMbWIqUoD64G+5NC9EU0OgtV81YcS/++oWVmkOZoH/MVYGLuqajQBx3pQOa29w==
   dependencies:
     cross-fetch "^3.1.2"
-    did-resolver "^3.1.0"
+    did-resolver "^3.1.3"
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
