@@ -24,7 +24,7 @@ describe('did:web driver', () => {
     expect(response.body.didResolutionMetadata).toEqual({
       error: 'notFound',
       message:
-        'DID must resolve to a valid https URL containing a JSON document: FetchError: request to https://this.address.is.not.a.d.i.d.com/.well-known/did.json failed, reason: getaddrinfo ENOTFOUND this.address.is.not.a.d.i.d.com'
+        'resolver_error: DID must resolve to a valid https URL containing a JSON document: FetchError: request to https://this.address.is.not.a.d.i.d.com/.well-known/did.json failed, reason: getaddrinfo ENOTFOUND this.address.is.not.a.d.i.d.com'
     })
   })
 })
