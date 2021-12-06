@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/uport-project/uport-did-driver/compare/2.2.2...2.2.3) (2021-12-06)
+
+
+### Bug Fixes
+
+* **deps:** Update did-dependencies ([03c329b](https://github.com/uport-project/uport-did-driver/commit/03c329bffcc27568c83634b7e2f884a192343dac))
+
 ## [2.2.2](https://github.com/uport-project/uport-did-driver/compare/2.2.1...2.2.2) (2021-11-10)
 
 
