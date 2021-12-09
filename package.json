@@ -23,7 +23,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "did-resolver": "3.1.4",
+    "did-resolver": "3.1.5",
     "ethr-did-resolver": "4.3.5",
     "express": "4.17.1",
     "nacl-did": "1.0.1",
