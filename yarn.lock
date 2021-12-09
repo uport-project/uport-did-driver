@@ -2296,10 +2296,10 @@ dezalgo@^1.0.0:
     asap "^2.0.0"
     wrappy "1"
 
-did-resolver@3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.1.4.tgz#9adc9682bfa6880078c0abd33555cae4a7e44d24"
-  integrity sha512-g/GcqiHLHp+iJtd0IAf6P3VNArAuqsbjQBjO3nuI3Br0nZN+gvEVO5KXNR8LyYwoIXMEh2gBIyoECUzARGvojw==
+did-resolver@3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.1.5.tgz#1a82a00fa96d64085676183bff40ebc13c88cd6a"
+  integrity sha512-/4lM1vK5osnWVZ2oN9QhlWV5xOwssuLSL1MvueBc8LQWotbD5kM9XQMe7h4GydYpbh3JaWMFkOWwc9jvSZ+qgg==
 
 did-resolver@^1.0.0:
   version "1.1.0"
