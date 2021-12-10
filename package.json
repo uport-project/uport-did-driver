@@ -27,7 +27,7 @@
     "ethr-did-resolver": "4.3.5",
     "express": "4.17.1",
     "nacl-did": "1.0.1",
-    "web-did-resolver": "2.0.9"
+    "web-did-resolver": "2.0.10"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
