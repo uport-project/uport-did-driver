@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/uport-project/uport-did-driver/compare/2.2.3...2.2.4) (2021-12-10)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency did-resolver to v3.1.5 ([e8188ee](https://github.com/uport-project/uport-did-driver/commit/e8188ee373953126e7965423c843dc118a9ec60c))
+
 ## [2.2.3](https://github.com/uport-project/uport-did-driver/compare/2.2.2...2.2.3) (2021-12-06)
 
 
