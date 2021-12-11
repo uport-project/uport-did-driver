@@ -1,3 +1,10 @@
+## [2.2.5](https://github.com/uport-project/uport-did-driver/compare/2.2.4...2.2.5) (2021-12-11)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency web-did-resolver to v2.0.10 ([3c00d45](https://github.com/uport-project/uport-did-driver/commit/3c00d458a5d0195287ad5d836b289adf6a03e0dc))
+
 ## [2.2.4](https://github.com/uport-project/uport-did-driver/compare/2.2.3...2.2.4) (2021-12-10)
 
 
