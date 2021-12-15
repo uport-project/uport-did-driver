@@ -6208,10 +6208,10 @@ wcwidth@^1.0.0:
   dependencies:
     defaults "^1.0.3"
 
-web-did-resolver@2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.10.tgz#c13b0ad1e01472c774fe78a504ad9eea625e0cae"
-  integrity sha512-sZwzGZgB2CU14S86/YMLCRk0n80q1kK6RzHUrI8NgBRPt9Hgeudj+6huDM2dYDPPBxFVKYG40Jbr0fXY2NThwg==
+web-did-resolver@2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.11.tgz#2b33d7c6b689b11a475e6df8ca43c74517228a42"
+  integrity sha512-cOYNMLLKiUGKslv0Jam6wiIh4ZD7t9SbmYCR3FCEUf30eHdfDfd65vIiBwQU2l9yktnC3Wch9QctPif0DWmG2w==
   dependencies:
     cross-fetch "^3.1.2"
     did-resolver "^3.1.3"
