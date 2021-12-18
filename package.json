@@ -1,6 +1,6 @@
 {
   "name": "uport-did-driver",
-  "version": "2.2.6",
+  "version": "2.2.7",
   "private": "true",
   "description": "uPort DID method driver",
   "main": "src/server.js",
