@@ -112,7 +112,7 @@ describe('did:ethr driver', () => {
             {
               controller: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
               id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey',
-              publicKeyHex: '0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
+              publicKeyHex: '02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
               type: 'EcdsaSecp256k1VerificationKey2019'
             }
           ]
