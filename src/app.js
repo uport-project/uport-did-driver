@@ -24,6 +24,12 @@ const providerConfig = {
       rpcUrl: 'https://volta-rpc.energyweb.org',
       registry: '0xc15d5a57a8eb0e1dcbe5d88b8f9a82017e5cc4af',
     },
+    {
+      name: 'ewc',
+      chainId: '246',
+      rpcUrl: 'https://rpc.energyweb.org',
+      registry: '0xE29672f34e92b56C9169f9D485fFc8b9A136BCE4',
+    },
 //    {
 //      name: 'matic',
 //      chainId: 137,
