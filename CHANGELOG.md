@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/uport-project/uport-did-driver/compare/2.2.9...2.3.0) (2022-02-13)
+
+
+### Features
+
+* add EnergyWebFoundation EWC network ([#68](https://github.com/uport-project/uport-did-driver/issues/68)) ([46d808b](https://github.com/uport-project/uport-did-driver/commit/46d808bcb78bec864822a9fdd821a4a5b30008cc))
+
 ## [2.2.9](https://github.com/uport-project/uport-did-driver/compare/2.2.8...2.2.9) (2022-01-20)
 
 
