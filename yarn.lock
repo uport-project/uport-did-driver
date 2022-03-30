@@ -2542,15 +2542,20 @@ dezalgo@1.0.3, dezalgo@^1.0.0:
     asap "^2.0.0"
     wrappy "1"
 
-did-resolver@3.1.5, did-resolver@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.1.5.tgz#1a82a00fa96d64085676183bff40ebc13c88cd6a"
-  integrity sha512-/4lM1vK5osnWVZ2oN9QhlWV5xOwssuLSL1MvueBc8LQWotbD5kM9XQMe7h4GydYpbh3JaWMFkOWwc9jvSZ+qgg==
+did-resolver@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.2.0.tgz#b89edd0dd70ad6f1c65ca1285472e021c2239707"
+  integrity sha512-8YiTRitfGt9hJYDIzjc254gXgJptO4zq6Q2BMZMNqkbCf9EFkV6BD4QIh5BUF4YjBglBgJY+duQRzO3UZAlZsw==
 
 did-resolver@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-1.1.0.tgz#27a63b6f2aa8dee3d622cd8b8b47360661e24f1e"
   integrity sha512-Q02Sc5VuQnJzzR8fQ/DzyCHiYb31WpQdocOsxppI66wwT4XalYRDeCr3a48mL6sYPQo76AkBh0mxte9ZBuQzxA==
+
+did-resolver@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.1.5.tgz#1a82a00fa96d64085676183bff40ebc13c88cd6a"
+  integrity sha512-/4lM1vK5osnWVZ2oN9QhlWV5xOwssuLSL1MvueBc8LQWotbD5kM9XQMe7h4GydYpbh3JaWMFkOWwc9jvSZ+qgg==
 
 diff-sequences@^27.5.1:
   version "27.5.1"
@@ -6325,10 +6330,10 @@ wcwidth@^1.0.0:
   dependencies:
     defaults "^1.0.3"
 
-web-did-resolver@2.0.12:
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.12.tgz#3413b988c2ab9d52378be7aa22ef457d70c48e21"
-  integrity sha512-bidL5bPn8CYFM33sfh465iLcgTbkNpfAlmpWkSC69D24fXnAY36tbMfhnehqIut+VCKZqIqeeZZl5ACanF5/+A==
+web-did-resolver@2.0.13:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.13.tgz#33935dbf2bbf1833d20716f1ee63b14aea37acac"
+  integrity sha512-afT5z0LJCdWIn42E6h2tM68CtPZGthNbC6HIL+HhECaTZO/tupk1MAeLj+bEvDEWm0cMK8JPmqZ6O5n73hsSag==
   dependencies:
     cross-fetch "^3.1.2"
     did-resolver "^3.1.5"
