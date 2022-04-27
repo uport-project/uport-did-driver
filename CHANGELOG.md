@@ -1,3 +1,10 @@
+## [2.3.5](https://github.com/uport-project/uport-did-driver/compare/2.3.4...2.3.5) (2022-04-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency express to v4.18.0 ([611c773](https://github.com/uport-project/uport-did-driver/commit/611c7730a4e14547110b7fcf2e1605d4bfb8c7bb))
+
 ## [2.3.4](https://github.com/uport-project/uport-did-driver/compare/2.3.3...2.3.4) (2022-04-15)
 
 
