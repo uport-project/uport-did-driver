@@ -14,7 +14,7 @@
   },
   "author": "Christian Lundkvist",
   "contributors": [
-    "Andres Junge <andres.junge@consensys.net>",
+    "Andres Junge",
     "Mircea Nistor <mircea.nistor@mesh.xyz>"
   ],
   "repository": {
@@ -24,10 +24,10 @@
   "license": "Apache-2.0",
   "dependencies": {
     "did-resolver": "3.2.2",
-    "ethr-did-resolver": "5.0.4",
+    "ethr-did-resolver": "^6.0.1",
     "express": "4.18.1",
     "nacl-did": "1.0.1",
-    "web-did-resolver": "2.0.17"
+    "web-did-resolver": "^2.0.18"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
@@ -37,7 +37,7 @@
     "@semantic-release/github": "8.0.4",
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "jest": "28.1.0",
+    "jest": "28.1.1",
     "semantic-release": "19.0.2",
     "supertest": "6.2.3"
   },

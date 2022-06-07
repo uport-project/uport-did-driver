@@ -23,26 +23,20 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v3
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: 14
+          cache: 'yarn'
+
       - run: yarn install --frozen-lockfile
       - run: yarn test
-      - name: setup git coordinates
+
+      - name: "Setup git coordinates"
         run: |
           git remote set-url origin https://uport-project:$GH_TOKEN@github.com/uport-project/uport-did-driver.git
           git config user.name $GH_USER
           git config user.email $GH_EMAIL
       - name: Login to DockerHub Registry
         run: echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
+
       - name: Push the tagged Docker image
         if: github.ref == 'refs/heads/master'
         run: yarn release

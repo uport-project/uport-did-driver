@@ -28,14 +28,14 @@ describe('did:ethr driver', () => {
         didDocument: {
           '@context': [
             'https://www.w3.org/ns/did/v1',
-            'https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld'
+            'https://w3id.org/security/suites/secp256k1recovery-2020/v2'
           ],
           authentication: ['did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller'],
           assertionMethod: ['did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller'],
           id: 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b',
           verificationMethod: [
             {
-              blockchainAccountId: '0xdCa7EF03e98e0DC2B855bE647C39ABe984fcF21B@eip155:1',
+              blockchainAccountId: 'eip155:1:0xdCa7EF03e98e0DC2B855bE647C39ABe984fcF21B',
               id: 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller',
               controller: 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b',
               type: 'EcdsaSecp256k1RecoveryMethod2020'
@@ -61,7 +61,7 @@ describe('did:ethr driver', () => {
         didDocument: {
           '@context': [
             'https://www.w3.org/ns/did/v1',
-            'https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld',
+            'https://w3id.org/security/suites/secp256k1recovery-2020/v2',
           ],
           id: 'did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388',
           verificationMethod: [
@@ -69,7 +69,7 @@ describe('did:ethr driver', () => {
               id: 'did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller',
               type: 'EcdsaSecp256k1RecoveryMethod2020',
               controller: 'did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388',
-              blockchainAccountId: '0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1',
+              blockchainAccountId: 'eip155:1:0x26bF14321004e770E7A8b080b7a526d8eed8b388',
             },
           ],
           authentication: ['did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller'],
@@ -91,7 +91,7 @@ describe('did:ethr driver', () => {
         didDocument: {
           '@context': [
             'https://www.w3.org/ns/did/v1',
-            'https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld'
+            'https://w3id.org/security/suites/secp256k1recovery-2020/v2'
           ],
           authentication: [
             'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
@@ -104,7 +104,7 @@ describe('did:ethr driver', () => {
           id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
           verificationMethod: [
             {
-              blockchainAccountId: '0xC662e6c5F91B9FcD22D7FcafC80Cf8b640aed247@eip155:1',
+              blockchainAccountId: 'eip155:1:0xC662e6c5F91B9FcD22D7FcafC80Cf8b640aed247',
               controller: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
               id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
               type: 'EcdsaSecp256k1RecoveryMethod2020'
