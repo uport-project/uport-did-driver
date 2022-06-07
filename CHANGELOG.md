@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/uport-project/uport-did-driver/compare/2.3.8...2.4.0) (2022-06-07)
+
+
+### Features
+
+* **deps:** bump did:ethr driver to 6.0 ([e32016d](https://github.com/uport-project/uport-did-driver/commit/e32016d0faa9849eae19ed0f7c782bf119ffdd3e))
+
 ## [2.3.8](https://github.com/uport-project/uport-did-driver/compare/2.3.7...2.3.8) (2022-06-07)
 
 
