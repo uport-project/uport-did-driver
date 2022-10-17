@@ -2353,6 +2353,11 @@ did-resolver@^3.2.2:
   resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-3.2.2.tgz#6f4e252a810f785d1b28a10265fad6dffee25158"
   integrity sha512-Eeo2F524VM5N3W4GwglZrnul2y6TLTwMQP3In62JdG34NZoqihYyOZLk+5wUW8sSgvIYIcJM8Dlt3xsdKZZ3tg==
 
+did-resolver@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-4.0.1.tgz#11bb3f19ed1c8f53f4af4702912fa9f7852fc305"
+  integrity sha512-eHs2VLKhcANmh08S87PKvOauIAmSOd7nb7AlhNxcvOyDAIGQY1UfbiqI1VOW5IDKvOO6aEWY+5edOt1qrCp1Eg==
+
 diff-sequences@^29.0.0:
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-29.0.0.tgz#bae49972ef3933556bcb0800b72e8579d19d9e4f"
@@ -2492,26 +2497,23 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
-ethr-did-registry@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/ethr-did-registry/-/ethr-did-registry-0.0.3.tgz#f363d2c73cb9572b57bd7a5c9c90c88485feceb5"
-  integrity sha512-4BPvMGkxAK9vTduCq6D5b8ZqjteD2cvDIPPriXP6nnmPhWKFSxypo+AFvyQ0omJGa0cGTR+dkdI/8jiF7U/qaw==
-
-ethr-did-resolver@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-6.0.1.tgz#e976f41094eec3a78197b4ee46a127b61272eb89"
-  integrity sha512-wVReAQ4Zv0Ot7/Q4+uwHFnO4+DDxSHcTQ36UXZDSkUiiJQqVFxPvGzNz6++D4VBwQYHFbEwu7OWfk33l7uuFbA==
+ethr-did-resolver@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-7.0.1.tgz#3df8fb9b81886776afda5b54eeb7c62038edd393"
+  integrity sha512-7/ifFxchMIyLRb+wOqS56Mo/UxHfHCd43T2ZTUAJNYZKMnUD25U2Sdpva/HsslfwFvmkDEK4+6GJjFRNvk2mzQ==
   dependencies:
     "@ethersproject/abi" "^5.6.3"
     "@ethersproject/abstract-signer" "^5.6.2"
     "@ethersproject/address" "^5.6.1"
     "@ethersproject/basex" "^5.6.1"
     "@ethersproject/bignumber" "^5.6.2"
+    "@ethersproject/bytes" "^5.6.1"
     "@ethersproject/contracts" "^5.6.2"
+    "@ethersproject/keccak256" "^5.6.1"
     "@ethersproject/providers" "^5.6.8"
+    "@ethersproject/signing-key" "^5.6.2"
     "@ethersproject/transactions" "^5.6.2"
-    did-resolver "^3.2.2"
-    ethr-did-registry "^0.0.3"
+    did-resolver "^4.0.1"
 
 execa@^5.0.0:
   version "5.1.1"
