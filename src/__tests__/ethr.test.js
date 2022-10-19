@@ -136,48 +136,6 @@ describe('did:ethr driver', () => {
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
     })
 
-    it('did:ethr:ropsten:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-      expect.assertions(1)
-      const did = 'did:ethr:ropsten:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-      const response = await request(app).get(`/1.0/identifiers/${did}`)
-      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    })
-
-    it('did:ethr:0x3:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-      expect.assertions(1)
-      const did = 'did:ethr:0x3:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-      const response = await request(app).get(`/1.0/identifiers/${did}`)
-      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    })
-
-    it('did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-      expect.assertions(1)
-      const did = 'did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-      const response = await request(app).get(`/1.0/identifiers/${did}`)
-      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    })
-
-    it('did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-      expect.assertions(1)
-      const did = 'did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-      const response = await request(app).get(`/1.0/identifiers/${did}`)
-      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    })
-
-    it('did:ethr:kovan:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-      expect.assertions(1)
-      const did = 'did:ethr:kovan:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-      const response = await request(app).get(`/1.0/identifiers/${did}`)
-      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    })
-
-    it('0did:ethr:0x2a:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736x2a', async () => {
-      expect.assertions(1)
-      const did = 'did:ethr:0x2a:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-      const response = await request(app).get(`/1.0/identifiers/${did}`)
-      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    })
-
     it('did:ethr:goerli:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
       expect.assertions(1)
       const did = 'did:ethr:goerli:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
@@ -255,7 +213,7 @@ describe('did:ethr driver', () => {
       const response = await request(app).get(`/1.0/identifiers/${did}`)
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
     })
-    
+
     it('did:ethr:0x12047:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
       expect.assertions(1)
       const did = 'did:ethr:0x12047:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
@@ -268,7 +226,7 @@ describe('did:ethr driver', () => {
       const response = await request(app).get(`/1.0/identifiers/${did}`)
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
     })
-    
+
     it('did:ethr:0xf6:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
       expect.assertions(1)
       const did = 'did:ethr:0xf6:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
