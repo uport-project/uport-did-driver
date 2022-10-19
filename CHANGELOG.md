@@ -1,3 +1,23 @@
+# [3.0.0](https://github.com/uport-project/uport-did-driver/compare/2.4.1...3.0.0) (2022-10-19)
+
+
+### Bug Fixes
+
+* **deps:** remove deprecated ethr networks ([68d4178](https://github.com/uport-project/uport-did-driver/commit/68d417814925105483ddb4490b8b988f4f8997b8))
+
+
+### BREAKING CHANGES
+
+* **deps:** ethereum testnets rinkeby, kovan and ropsten are no longer usable for did:ethr
+
+The following DID prefixes are no longer valid:
+did:ethr:rinkeby
+did:ethr:ropsten
+did:ethr:kovan
+did:ethr:0x3
+did:ethr:0x4
+did:ethr:0x2a
+
 ## [2.4.1](https://github.com/uport-project/uport-did-driver/compare/2.4.0...2.4.1) (2022-08-03)
 
 
