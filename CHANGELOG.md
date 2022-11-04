@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/uport-project/uport-did-driver/compare/3.0.0...3.1.0) (2022-11-04)
+
+
+### Features
+
+* add did-resolver-ens ([f0eb9e7](https://github.com/uport-project/uport-did-driver/commit/f0eb9e76546b82fe65f5c0e95d7488e87965d052))
+
 # [3.0.0](https://github.com/uport-project/uport-did-driver/compare/2.4.1...3.0.0) (2022-10-19)
 
 
