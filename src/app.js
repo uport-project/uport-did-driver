@@ -1,5 +1,6 @@
 const { Resolver } = require('did-resolver')
 const ethr = require('ethr-did-resolver')
+const ens = require('ens-did-resolver')
 const web = require('web-did-resolver')
 const nacl = require('nacl-did')
 
@@ -46,6 +47,10 @@ const providerConfig = {
 const resolver = new Resolver(
   {
     ...ethr.getResolver(providerConfig),
+    ...ens.getResolver({ networks: [
+      { name: 'goerli', rpcUrl: 'https://goerli.infura.io/v3/e471b8639c314004ae67ec0078f70102' },
+      { rpcUrl: 'https://mainnet.infura.io/v3/e471b8639c314004ae67ec0078f70102' }
+    ]}),
     ...web.getResolver(),
   },
   {
