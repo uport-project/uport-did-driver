@@ -1,6 +1,8 @@
 var app = require('../app')
 var request = require('supertest')
 
+jest.setTimeout(20000)
+
 describe('did:ens driver', () => {
   it('responds with didResolutionResult', async () => {
     expect.assertions(4)
