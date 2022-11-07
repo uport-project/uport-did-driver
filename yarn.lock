@@ -2367,10 +2367,10 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
-ethr-did-resolver@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-7.0.1.tgz#3df8fb9b81886776afda5b54eeb7c62038edd393"
-  integrity sha512-7/ifFxchMIyLRb+wOqS56Mo/UxHfHCd43T2ZTUAJNYZKMnUD25U2Sdpva/HsslfwFvmkDEK4+6GJjFRNvk2mzQ==
+ethr-did-resolver@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-8.0.0.tgz#6b13dd3b673feb372d731983f36513c594ae4649"
+  integrity sha512-iOsWa4qJAIt0kl6ilX1usOGq5j+Sqq5YR3OjmPSaaquvJNQUv0DjOn9656WSHvkknELmZAoXZH9naPGarTqldQ==
   dependencies:
     "@ethersproject/abi" "^5.6.3"
     "@ethersproject/abstract-signer" "^5.6.2"
