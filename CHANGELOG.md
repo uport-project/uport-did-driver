@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/uport-project/uport-did-driver/compare/3.1.1...3.2.0) (2023-02-08)
+
+
+### Features
+
+* add 3id resolution and convert to ESM ([#103](https://github.com/uport-project/uport-did-driver/issues/103)) ([6325218](https://github.com/uport-project/uport-did-driver/commit/6325218c784821994c9cd19a6c6a32f66049743d))
+
 ## [3.1.1](https://github.com/uport-project/uport-did-driver/compare/3.1.0...3.1.1) (2022-11-07)
 
 
