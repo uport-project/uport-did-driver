@@ -1,9 +1,13 @@
-const { Resolver } = require('did-resolver')
-const ethr = require('ethr-did-resolver')
-const ens = require('ens-did-resolver')
-const web = require('web-did-resolver')
-const nacl = require('nacl-did')
+import { Resolver } from 'did-resolver'
+import ethr from 'ethr-did-resolver'
+import ens from 'ens-did-resolver'
+import { getResolver as getWebResolver } from 'web-did-resolver'
+import nacl from 'nacl-did'
+import { CeramicClient } from '@ceramicnetwork/http-client'
+import { getResolver as get3IDResolver } from '@ceramicnetwork/3id-did-resolver'
+import express from 'express'
 
+const ceramic = new CeramicClient('https://gateway.ceramic.network')
 //this project ID is only useful for ethr-did resolution
 const infuraId = 'ec9c99d75b834bac8dd4bfacad8cfdf7'
 
@@ -51,7 +55,8 @@ const resolver = new Resolver(
       { name: 'goerli', rpcUrl: 'https://goerli.infura.io/v3/e471b8639c314004ae67ec0078f70102' },
       { rpcUrl: 'https://mainnet.infura.io/v3/e471b8639c314004ae67ec0078f70102' }
     ]}),
-    ...web.getResolver(),
+    ...getWebResolver(),
+    ...get3IDResolver(ceramic)
   },
   {
     legacyResolvers: {
@@ -60,7 +65,6 @@ const resolver = new Resolver(
   }
 )
 
-const express = require('express')
 const app = express()
 
 app.get('/1.0/identifiers/*', function (req, res) {
@@ -85,4 +89,4 @@ app.get('/1.0/identifiers/*', function (req, res) {
     })
 })
 
-module.exports = app
+export default app

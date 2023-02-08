@@ -1,7 +1,5 @@
-var app = require('../app')
-var request = require('supertest')
-
-jest.setTimeout(20000)
+import app from '../app.js'
+import request from 'supertest'
 
 describe('did:ens driver', () => {
   it('responds with didResolutionResult', async () => {
