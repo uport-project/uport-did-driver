@@ -1,5 +1,5 @@
-var app = require('../app')
-var request = require('supertest')
+import app from '../app.js'
+import request from 'supertest'
 
 describe('did:ethr driver', () => {
   it('responds with didResolutionResult', async () => {

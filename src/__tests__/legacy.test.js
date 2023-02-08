@@ -1,5 +1,5 @@
-var app = require('../app')
-var request = require('supertest')
+import app from '../app.js'
+import request from 'supertest'
 
 describe('uport-did-driver responds with did doc for', () => {
   it('responds with didResolutionResult for did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI', async () => {
