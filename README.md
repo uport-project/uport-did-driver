@@ -1,20 +1,25 @@
 # uport-did-driver
 
-Driver for the uPort DID methods to be used in the [Universal Resolver](https://github.com/decentralized-identity/universal-resolver). The Docker image is hosted on Docker Hub here:
+Driver for the uPort DID methods to be used in
+the [Universal Resolver](https://github.com/decentralized-identity/universal-resolver). The Docker image is hosted on
+Docker Hub here:
 
 <https://hub.docker.com/r/uport/uni-resolver-driver-did-uport/>
 
-The file `src/server.js` is an small Express Node app acting as a thin wrapper around the [Javascript DID resolver](https://github.com/decentralized-identity/did-resolver). It listens to port 8081.
+The file `src/server.js` is a small Express Node app acting as a thin wrapper around
+the [Javascript DID resolver](https://github.com/decentralized-identity/did-resolver). It listens to port 8081.
 
 The following DID methods are supported:
 
 * [ethr](https://github.com/decentralized-identity/ethr-did-resolver)
 * [web](https://github.com/decentralized-identity/web-did-resolver)
 * [nacl](https://github.com/uport-project/nacl-did) (DEPRECATED, please use `did:key` instead)
+* [ens](https://github.com/veramolabs/ens-did-resolver)
 
 ## Curl Tests
 
-Run service with 
+Run service with
+
 ```
 npm start
 ```
@@ -40,3 +45,4 @@ curl -X GET http://localhost:8081/1.0/identifiers/did:nacl:Md8JiMIwsapml_FtQ2ngn
 * `did:web:pulsar.veramo.io`
 * `did:web:did.actor:alice`
 * `did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI`
+* `did:ens:vitalik.eth`

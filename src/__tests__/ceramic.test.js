@@ -1,7 +1,7 @@
 import app from '../app.js'
 import request from 'supertest'
 
-describe('did:3 driver', () => {
+describe.skip('did:3 driver', () => {
   it('responds with didResolutionResult', async () => {
     expect.assertions(4)
     const did = 'did:3:kjzl6cwe1jw14akzaln614o61ewgfzpmxhrn7zmejvgpuegdpz303uhurlmqjpx'

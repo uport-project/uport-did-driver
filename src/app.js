@@ -3,11 +3,13 @@ import ethr from 'ethr-did-resolver'
 import ens from 'ens-did-resolver'
 import { getResolver as getWebResolver } from 'web-did-resolver'
 import nacl from 'nacl-did'
-import { CeramicClient } from '@ceramicnetwork/http-client'
-import { getResolver as get3IDResolver } from '@ceramicnetwork/3id-did-resolver'
 import express from 'express'
 
-const ceramic = new CeramicClient('https://gateway.ceramic.network')
+// import { CeramicClient } from '@ceramicnetwork/http-client'
+// import { getResolver as get3IDResolver } from '@ceramicnetwork/3id-did-resolver'
+// // This public gateway is currently deprecated. Removing support for did:3 until we can spin up a more stable gateway.
+// const ceramic = new CeramicClient('https://gateway.ceramic.network')
+
 //this project ID is only useful for ethr-did resolution
 const infuraId = 'ec9c99d75b834bac8dd4bfacad8cfdf7'
 
@@ -56,7 +58,7 @@ const resolver = new Resolver(
       { rpcUrl: 'https://mainnet.infura.io/v3/e471b8639c314004ae67ec0078f70102' }
     ]}),
     ...getWebResolver(),
-    ...get3IDResolver(ceramic)
+    // ...get3IDResolver(ceramic)
   },
   {
     legacyResolvers: {
