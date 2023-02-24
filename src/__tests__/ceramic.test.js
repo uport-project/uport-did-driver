@@ -10,8 +10,7 @@ describe.skip('did:3 driver', () => {
     expect(response.body).toHaveProperty('didDocument')
     expect(response.body).toHaveProperty('didDocumentMetadata')
     expect(response.body.didResolutionMetadata).toEqual({
-      contentType: 'application/did+json'
+      contentType: 'application/did+json',
     })
   })
-
 })
