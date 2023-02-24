@@ -1,5 +1,8 @@
 import app from '../app.js'
 import request from 'supertest'
+import { jest } from '@jest/globals'
+
+jest.setTimeout(30000)
 
 describe('did:ethr driver', () => {
   it('responds with didResolutionResult', async () => {
@@ -10,7 +13,7 @@ describe('did:ethr driver', () => {
     expect(response.body).toHaveProperty('didDocument')
     expect(response.body).toHaveProperty('didDocumentMetadata')
     expect(response.body.didResolutionMetadata).toEqual({
-      contentType: 'application/did+ld+json'
+      contentType: 'application/did+ld+json',
     })
   })
 
@@ -23,12 +26,12 @@ describe('did:ethr driver', () => {
       expect(response.body).toEqual({
         didDocumentMetadata: {},
         didResolutionMetadata: {
-          contentType: 'application/did+ld+json'
+          contentType: 'application/did+ld+json',
         },
         didDocument: {
           '@context': [
             'https://www.w3.org/ns/did/v1',
-            'https://w3id.org/security/suites/secp256k1recovery-2020/v2'
+            'https://w3id.org/security/suites/secp256k1recovery-2020/v2',
           ],
           authentication: ['did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller'],
           assertionMethod: ['did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller'],
@@ -38,10 +41,10 @@ describe('did:ethr driver', () => {
               blockchainAccountId: 'eip155:1:0xdCa7EF03e98e0DC2B855bE647C39ABe984fcF21B',
               id: 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller',
               controller: 'did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b',
-              type: 'EcdsaSecp256k1RecoveryMethod2020'
-            }
-          ]
-        }
+              type: 'EcdsaSecp256k1RecoveryMethod2020',
+            },
+          ],
+        },
       })
     })
 
@@ -86,20 +89,20 @@ describe('did:ethr driver', () => {
       expect(response.body).toEqual({
         didDocumentMetadata: {},
         didResolutionMetadata: {
-          contentType: 'application/did+ld+json'
+          contentType: 'application/did+ld+json',
         },
         didDocument: {
           '@context': [
             'https://www.w3.org/ns/did/v1',
-            'https://w3id.org/security/suites/secp256k1recovery-2020/v2'
+            'https://w3id.org/security/suites/secp256k1recovery-2020/v2',
           ],
           authentication: [
             'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
-            'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey'
+            'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey',
           ],
           assertionMethod: [
             'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
-            'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey'
+            'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey',
           ],
           id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
           verificationMethod: [
@@ -107,16 +110,16 @@ describe('did:ethr driver', () => {
               blockchainAccountId: 'eip155:1:0xC662e6c5F91B9FcD22D7FcafC80Cf8b640aed247',
               controller: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
               id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
-              type: 'EcdsaSecp256k1RecoveryMethod2020'
+              type: 'EcdsaSecp256k1RecoveryMethod2020',
             },
             {
               controller: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
               id: 'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controllerKey',
               publicKeyHex: '02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71',
-              type: 'EcdsaSecp256k1VerificationKey2019'
-            }
-          ]
-        }
+              type: 'EcdsaSecp256k1VerificationKey2019',
+            },
+          ],
+        },
       })
     })
   })
@@ -164,33 +167,33 @@ describe('did:ethr driver', () => {
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
     })
 
-//    it('did:ethr:matic:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-//      expect.assertions(1)
-//      const did = 'did:ethr:matic:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-//      const response = await request(app).get(`/1.0/identifiers/${did}`)
-//      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-//    })
-//
-//    it('did:ethr:0x89:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-//      expect.assertions(1)
-//      const did = 'did:ethr:0x89:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-//      const response = await request(app).get(`/1.0/identifiers/${did}`)
-//      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-//    })
-//
-//    it('did:ethr:maticmum:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-//      expect.assertions(1)
-//      const did = 'did:ethr:maticmum:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-//      const response = await request(app).get(`/1.0/identifiers/${did}`)
-//      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-//    })
-//
-//    it('did:ethr:0x13881:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-//      expect.assertions(1)
-//      const did = 'did:ethr:0x13881:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-//      const response = await request(app).get(`/1.0/identifiers/${did}`)
-//      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-//    })
+    //    it('did:ethr:matic:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+    //      expect.assertions(1)
+    //      const did = 'did:ethr:matic:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+    //      const response = await request(app).get(`/1.0/identifiers/${did}`)
+    //      expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    //    })
+    //
+    //    it('did:ethr:0x89:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+    //      expect.assertions(1)
+    //      const did = 'did:ethr:0x89:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+    //      const response = await request(app).get(`/1.0/identifiers/${did}`)
+    //      expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    //    })
+    //
+    //    it('did:ethr:maticmum:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+    //      expect.assertions(1)
+    //      const did = 'did:ethr:maticmum:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+    //      const response = await request(app).get(`/1.0/identifiers/${did}`)
+    //      expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    //    })
+    //
+    //    it('did:ethr:0x13881:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+    //      expect.assertions(1)
+    //      const did = 'did:ethr:0x13881:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+    //      const response = await request(app).get(`/1.0/identifiers/${did}`)
+    //      expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    //    })
 
     it('did:ethr:0x03c401:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
       expect.assertions(1)
@@ -205,7 +208,6 @@ describe('did:ethr driver', () => {
       const response = await request(app).get(`/1.0/identifiers/${did}`)
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
     })
-
 
     it('did:ethr:volta:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
       expect.assertions(1)
@@ -243,7 +245,7 @@ describe('did:ethr driver', () => {
       expect(response.status).toBe(200)
       expect(response.body.didResolutionMetadata).toEqual({
         error: 'unknownNetwork',
-        message: 'The DID resolver does not have a configuration for network: unknown'
+        message: 'The DID resolver does not have a configuration for network: unknown',
       })
     })
 
@@ -253,7 +255,7 @@ describe('did:ethr driver', () => {
       const response = await request(app).get(`/1.0/identifiers/${did}`)
       expect(response.status).toBe(200)
       expect(response.body.didResolutionMetadata).toEqual({
-        error: 'invalidDid'
+        error: 'invalidDid',
       })
     })
 
@@ -264,7 +266,7 @@ describe('did:ethr driver', () => {
       expect(response.status).toBe(200)
       expect(response.body.didResolutionMetadata).toEqual({
         error: 'invalidDid',
-        message: 'Not a valid did:ethr: 0x1234'
+        message: 'Not a valid did:ethr: 0x1234',
       })
     })
   })
