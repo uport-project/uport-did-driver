@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/uport-project/uport-did-driver/compare/3.2.0...4.0.0) (2023-02-24)
+
+
+### Bug Fixes
+
+* remove deprecated ceramic networks and support for did:3 ([#105](https://github.com/uport-project/uport-did-driver/issues/105)) ([a5d97a5](https://github.com/uport-project/uport-did-driver/commit/a5d97a5efff87b984c9c2eac100afab086706c69)), closes [#104](https://github.com/uport-project/uport-did-driver/issues/104)
+
+
+### BREAKING CHANGES
+
+* removed support for did:3 because the public gateway for ceramic network was deprecated
+
 # [3.2.0](https://github.com/uport-project/uport-did-driver/compare/3.1.1...3.2.0) (2023-02-08)
 
 
