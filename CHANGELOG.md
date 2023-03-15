@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/uport-project/uport-did-driver/compare/4.0.0...4.0.1) (2023-03-15)
+
+
+### Bug Fixes
+
+* **deps:** Update did-dependencies ([335e880](https://github.com/uport-project/uport-did-driver/commit/335e8806d1b66e21c2c8838d412fddef2c422b6c))
+
 # [4.0.0](https://github.com/uport-project/uport-did-driver/compare/3.2.0...4.0.0) (2023-02-24)
 
 
