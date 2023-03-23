@@ -2379,9 +2379,9 @@ encoding@^0.1.13:
     iconv-lite "^0.6.2"
 
 ens-did-resolver@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ens-did-resolver/-/ens-did-resolver-1.0.2.tgz#5fb945aff4301477fd1ae20639f224dab0cc989f"
-  integrity sha512-MJ0vCe4hMNI0i9JFUTSULk2aWiiJXn+u2LB1xgN/pPT8FT82E17UdZhryVgAzAfJvbhKoeYzqMh3K15gVJMOCQ==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/ens-did-resolver/-/ens-did-resolver-1.0.4.tgz#fd25a63414b77378798247551fd1c8ebf000fc33"
+  integrity sha512-q98tPenkIrPlw8QK1rFuFs0AlTPffbdWoyHRji7OmtvDA3oyF3vUMhmOl3pBN/iU0Gvmd0NT4uQ4ErdWjYeg7Q==
   dependencies:
     "@ethersproject/bignumber" "^5.1.0"
     "@ethersproject/providers" "^5.1.0"
