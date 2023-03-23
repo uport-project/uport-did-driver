@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/uport-project/uport-did-driver/compare/4.0.1...4.0.2) (2023-03-23)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency ens-did-resolver to v1.0.4 ([fd4a039](https://github.com/uport-project/uport-did-driver/commit/fd4a039ae8356f43ad88637003658a5bbbb30efa))
+
 ## [4.0.1](https://github.com/uport-project/uport-did-driver/compare/4.0.0...4.0.1) (2023-03-15)
 
 
