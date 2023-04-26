@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/uport-project/uport-did-driver/compare/4.0.4...4.1.0) (2023-04-26)
+
+
+### Features
+
+* add did:peer and did:plc support ([#108](https://github.com/uport-project/uport-did-driver/issues/108)) ([5f2a7f2](https://github.com/uport-project/uport-did-driver/commit/5f2a7f24506e5057601480adc25be431a1b3184a))
+
 ## [4.0.4](https://github.com/uport-project/uport-did-driver/compare/4.0.3...4.0.4) (2023-04-03)
 
 
