@@ -2,6 +2,8 @@ import { Resolver } from 'did-resolver'
 import ethr from 'ethr-did-resolver'
 import ens from 'ens-did-resolver'
 import { getResolver as getWebResolver } from 'web-did-resolver'
+import { getResolver as getPeerResolver } from 'peer-did-resolver'
+import { getResolver as getPlcResolver } from 'plc-did-resolver'
 import nacl from 'nacl-did'
 import express from 'express'
 
@@ -17,10 +19,6 @@ const providerConfig = {
   infuraProjectId: infuraId,
   networks: [
     { name: 'rsk', chainId: 30, rpcUrl: 'https://did.rsk.co:4444' },
-    {
-      chainId: '0x03c301',
-      rpcUrl: 'https://rpc.sigma1.artis.network',
-    },
     {
       chainId: '0x03c401',
       rpcUrl: 'https://rpc.tau1.artis.network',
@@ -60,6 +58,8 @@ const resolver = new Resolver(
       ],
     }),
     ...getWebResolver(),
+    ...getPeerResolver(),
+    ...getPlcResolver(),
     // ...get3IDResolver(ceramic)
   },
   {
