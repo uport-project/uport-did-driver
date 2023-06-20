@@ -6,6 +6,7 @@ import { getResolver as getPeerResolver } from 'peer-did-resolver'
 import { getResolver as getPlcResolver } from 'plc-did-resolver'
 import nacl from 'nacl-did'
 import express from 'express'
+import actuator from 'express-actuator'
 
 // import { CeramicClient } from '@ceramicnetwork/http-client'
 // import { getResolver as get3IDResolver } from '@ceramicnetwork/3id-did-resolver'
@@ -70,6 +71,8 @@ const resolver = new Resolver(
 )
 
 const app = express()
+
+app.use(actuator())
 
 app.get('/1.0/identifiers/*', function (req, res) {
   const url = req.url
