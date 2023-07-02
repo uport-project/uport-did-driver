@@ -2375,11 +2375,11 @@ cross-env@^7.0.3:
     cross-spawn "^7.0.1"
 
 cross-fetch@^3.1.5:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.6.tgz#bae05aa31a4da760969756318feeee6e70f15d6c"
-  integrity sha512-riRvo06crlE8HiqOwIpQhxwdOk4fOeR7FVM/wXoxchFEqMNUjvbs3bfo4OTgMEMHzppd4DxFBDbyySj8Cv781g==
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.7.tgz#5f5a1e97021f427166fed50f86d48fc70bcd916e"
+  integrity sha512-Ff9FKeIMm0Rx1o8TEV87bTK5M232akt7uSAYrSTU/QA/W6Jj9P+fWn1mxGgl+dwDzpFoAY35OIS2SJXA8WEWKA==
   dependencies:
-    node-fetch "^2.6.11"
+    node-fetch "2.6.12"
 
 cross-spawn@^7.0.1, cross-spawn@^7.0.3:
   version "7.0.3"
@@ -4762,10 +4762,10 @@ node-emoji@^1.11.0:
   dependencies:
     lodash "^4.17.21"
 
-node-fetch@^2.6.11:
-  version "2.6.11"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.11.tgz#cde7fc71deef3131ef80a738919f999e6edfff25"
-  integrity sha512-4I6pdBY1EthSqDmJkiNk3JIT8cswwR9nfeW/cPdUagJYEQG7R95WRH74wpz7ma8Gh/9dI9FP+OU+0E4FvtA55w==
+node-fetch@2.6.12:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.12.tgz#02eb8e22074018e3d5a83016649d04df0e348fba"
+  integrity sha512-C/fGU2E8ToujUivIO0H+tpQ6HWo4eEmchoPIoXtxCrVghxdKq+QOHqEZW7tuP3KlV3bC8FRMO5nMCC7Zm1VP6g==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -6503,9 +6503,9 @@ wcwidth@^1.0.0:
     defaults "^1.0.3"
 
 web-did-resolver@^2.0.21:
-  version "2.0.24"
-  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.24.tgz#557aae25d5c88ea662c23115fbebd46885d958db"
-  integrity sha512-tJfOfMeXyucV42D3tU7wcPcsvY92CiuaqeF5JRIE6GP7G9z07X6LhNQMFMHUL5D9Jqb7Twk19oKZGE2ivKeC1w==
+  version "2.0.25"
+  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.25.tgz#ce04dbc5e326c915040fd912199177ca49121a85"
+  integrity sha512-4UOsZ+qkkkUbqtGBgAiLemgvHRvsfOwOApeIQWqw7xGaDq0MDAI2GNCF79vp0oBoxX5dIakDRzXW5BMdrkTgOQ==
   dependencies:
     cross-fetch "^3.1.5"
     did-resolver "^4.0.0"
