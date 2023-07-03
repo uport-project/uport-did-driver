@@ -2374,10 +2374,10 @@ cross-env@^7.0.3:
   dependencies:
     cross-spawn "^7.0.1"
 
-cross-fetch@^3.1.5:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.8.tgz#0327eba65fd68a7d119f8fb2bf9334a1a7956f82"
-  integrity sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==
+cross-fetch@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-4.0.0.tgz#f037aef1580bb3a1a35164ea2a848ba81b445983"
+  integrity sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==
   dependencies:
     node-fetch "^2.6.12"
 
@@ -6503,11 +6503,11 @@ wcwidth@^1.0.0:
     defaults "^1.0.3"
 
 web-did-resolver@^2.0.21:
-  version "2.0.26"
-  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.26.tgz#b800a6951984a5c9360b528e2d7176ef8b0d45ac"
-  integrity sha512-LSNb8+/64vPhFHQegPsPjvHNg5wJtqQIABZSEG0Mk2ugD+yHMMtTLhYV5ZD+/8x6q5FJdcRk7h76ifBfRL3iig==
+  version "2.0.27"
+  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.27.tgz#21884a41d64c2042c307acb2d6e2061244e09806"
+  integrity sha512-YxQlNdeYBXLhVpMW62+TPlc6sSOiWyBYq7DNvY6FXmXOD9g0zLeShpq2uCKFFQV/WlSrBi/yebK/W5lMTDxMUQ==
   dependencies:
-    cross-fetch "^3.1.5"
+    cross-fetch "^4.0.0"
     did-resolver "^4.0.0"
 
 webidl-conversions@^3.0.0:
