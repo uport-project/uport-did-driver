@@ -1,3 +1,21 @@
+# [4.2.0](https://github.com/uport-project/uport-did-driver/compare/4.1.0...4.2.0) (2023-09-18)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency ethr-did-resolver to v8.1.0 ([937bfed](https://github.com/uport-project/uport-did-driver/commit/937bfed5412179a47623db852102aa9339b4fc50))
+* **deps:** Update dependency ethr-did-resolver to v8.1.1 ([ea39a31](https://github.com/uport-project/uport-did-driver/commit/ea39a3128ebf74a1d07447275a77dc5f8a228e91))
+* **deps:** Update dependency ethr-did-resolver to v8.1.2 ([24c438c](https://github.com/uport-project/uport-did-driver/commit/24c438c93f0358b0d7367aca4a82c69451afe757))
+* **deps:** Update dependency web-did-resolver to v2.0.24 ([c4910c7](https://github.com/uport-project/uport-did-driver/commit/c4910c77fe49c6a0958e2561d6b9d7c7bd2c70bc))
+* **deps:** Update dependency web-did-resolver to v2.0.25 ([76f17f9](https://github.com/uport-project/uport-did-driver/commit/76f17f9986956d7f725b22b89c772485177708d0))
+* **deps:** Update dependency web-did-resolver to v2.0.26 ([db69871](https://github.com/uport-project/uport-did-driver/commit/db69871d6d4b9f58ef827920bef8cd22083609f8))
+* **deps:** Update dependency web-did-resolver to v2.0.27 ([49f6e02](https://github.com/uport-project/uport-did-driver/commit/49f6e02faec982e6b0900313ede938baa76bc500))
+
+
+### Features
+
+* add container health probes ([#109](https://github.com/uport-project/uport-did-driver/issues/109)) ([1877209](https://github.com/uport-project/uport-did-driver/commit/18772092762cf1a0d271e814de2bd1aad8810475))
+
 # [4.1.0](https://github.com/uport-project/uport-did-driver/compare/4.0.4...4.1.0) (2023-04-26)
 
 
