@@ -2440,7 +2440,7 @@ etag@~1.8.1:
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
-ethers@6.8.1:
+ethers@^6.8.1:
   version "6.8.1"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-6.8.1.tgz#ee2a1a39b5f62a13678f90ccd879175391d0a2b4"
   integrity sha512-iEKm6zox5h1lDn6scuRWdIdFJUCGg3+/aQWu0F4K0GVyEZiktFkqrJbRjTn1FlYEPz7RKA707D6g5Kdk6j7Ljg==
@@ -2454,12 +2454,12 @@ ethers@6.8.1:
     ws "8.5.0"
 
 ethr-did-resolver@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-9.1.0.tgz#39bbaef4e32cb1c4f17b3ed5d71d561d9fd4e507"
-  integrity sha512-aScgltokyQggt9KoIPWozR/Qk3gSeoVqlY2Wu8YLjQkiJaQOrTPxZsvVenHMt7J28GejqvYmv0k38QQi1GqdHw==
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-9.1.1.tgz#65f69c8014971207a5a677c5f8c66423c7edcea1"
+  integrity sha512-eJquzAOtfEg7rMsyJP+ALLcwaCZHq0vaYfUtioG7VCfXnOkXte7LcPiYJpvUs8m4MailLWxbEIS7+PLTJ2xmmQ==
   dependencies:
     did-resolver "^4.1.0"
-    ethers "6.8.1"
+    ethers "^6.8.1"
 
 event-target-shim@^5.0.0:
   version "5.0.1"
