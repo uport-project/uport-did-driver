@@ -2,7 +2,7 @@ import app from '../app.js'
 import request from 'supertest'
 
 describe('uport-did-driver responds with did doc for', () => {
-  it('responds with didResolutionResult for did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI', async () => {
+  it.skip('responds with didResolutionResult for did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI', async () => {
     expect.assertions(5)
     const did = 'did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI'
     const response = await request(app).get(`/1.0/identifiers/${did}`)

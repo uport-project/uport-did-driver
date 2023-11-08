@@ -4,7 +4,6 @@ import ens from 'ens-did-resolver'
 import { getResolver as getWebResolver } from 'web-did-resolver'
 import { getResolver as getPeerResolver } from 'peer-did-resolver'
 import { getResolver as getPlcResolver } from 'plc-did-resolver'
-import nacl from 'nacl-did'
 import express from 'express'
 import actuator from 'express-actuator'
 
@@ -19,7 +18,7 @@ const infuraId = 'ec9c99d75b834bac8dd4bfacad8cfdf7'
 const providerConfig = {
   infuraProjectId: infuraId,
   networks: [
-    { name: 'rsk', chainId: 30, rpcUrl: 'https://did.rsk.co:4444' },
+    // { name: 'rsk', chainId: 30, rpcUrl: 'https://did.rsk.co:4444' },
     {
       chainId: '0x03c401',
       rpcUrl: 'https://rpc.tau1.artis.network',
@@ -36,39 +35,32 @@ const providerConfig = {
       rpcUrl: 'https://rpc.energyweb.org',
       registry: '0xE29672f34e92b56C9169f9D485fFc8b9A136BCE4',
     },
-    //    {
-    //      name: 'matic',
-    //      chainId: 137,
-    //      rpcUrl: 'https://rpc-mainnet.matic.network'
-    //    },
-    //    {
-    //      name: 'maticmum',
-    //      chainId: 80001,
-    //      rpcUrl: 'https://rpc-mumbai.matic.today'
-    //    }
+    {
+      name: 'matic',
+      chainId: 137,
+      rpcUrl: 'https://polygon-rpc.com/',
+    },
+    // {
+    //   name: 'maticmum',
+    //   chainId: 80001,
+    //   rpcUrl: 'https://rpc-mumbai.matic.today',
+    // },
   ],
 }
 
-const resolver = new Resolver(
-  {
-    ...ethr.getResolver(providerConfig),
-    ...ens.getResolver({
-      networks: [
-        { name: 'goerli', rpcUrl: 'https://goerli.infura.io/v3/e471b8639c314004ae67ec0078f70102' },
-        { rpcUrl: 'https://mainnet.infura.io/v3/e471b8639c314004ae67ec0078f70102' },
-      ],
-    }),
-    ...getWebResolver(),
-    ...getPeerResolver(),
-    ...getPlcResolver(),
-    // ...get3IDResolver(ceramic)
-  },
-  {
-    legacyResolvers: {
-      nacl: nacl.resolver,
-    },
-  },
-)
+const resolver = new Resolver({
+  ...ethr.getResolver(providerConfig),
+  ...ens.getResolver({
+    networks: [
+      { name: 'goerli', rpcUrl: 'https://goerli.infura.io/v3/e471b8639c314004ae67ec0078f70102' },
+      { rpcUrl: 'https://mainnet.infura.io/v3/e471b8639c314004ae67ec0078f70102' },
+    ],
+  }),
+  ...getWebResolver(),
+  ...getPeerResolver(),
+  ...getPlcResolver(),
+  // ...get3IDResolver(ceramic)
+})
 
 const app = express()
 

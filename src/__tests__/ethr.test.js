@@ -32,6 +32,7 @@ describe('did:ethr driver', () => {
           '@context': [
             'https://www.w3.org/ns/did/v1',
             'https://w3id.org/security/suites/secp256k1recovery-2020/v2',
+            'https://w3id.org/security/v3-unstable',
           ],
           authentication: ['did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller'],
           assertionMethod: ['did:ethr:0xdca7ef03e98e0dc2b855be647c39abe984fcf21b#controller'],
@@ -65,6 +66,7 @@ describe('did:ethr driver', () => {
           '@context': [
             'https://www.w3.org/ns/did/v1',
             'https://w3id.org/security/suites/secp256k1recovery-2020/v2',
+            'https://w3id.org/security/v3-unstable',
           ],
           id: 'did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388',
           verificationMethod: [
@@ -95,6 +97,7 @@ describe('did:ethr driver', () => {
           '@context': [
             'https://www.w3.org/ns/did/v1',
             'https://w3id.org/security/suites/secp256k1recovery-2020/v2',
+            'https://w3id.org/security/v3-unstable',
           ],
           authentication: [
             'did:ethr:0x02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71#controller',
@@ -153,47 +156,47 @@ describe('did:ethr driver', () => {
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
     })
 
-    it('did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+    // it('did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+    //   expect.assertions(1)
+    //   const did = 'did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+    //   const response = await request(app).get(`/1.0/identifiers/${did}`)
+    //   expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    // })
+
+    // it('did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+    //   expect.assertions(1)
+    //   const did = 'did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+    //   const response = await request(app).get(`/1.0/identifiers/${did}`)
+    //   expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    // })
+
+    it('did:ethr:matic:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
       expect.assertions(1)
-      const did = 'did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+      const did = 'did:ethr:matic:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
       const response = await request(app).get(`/1.0/identifiers/${did}`)
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
     })
 
-    it('did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+    it('did:ethr:0x89:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
       expect.assertions(1)
-      const did = 'did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+      const did = 'did:ethr:0x89:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
       const response = await request(app).get(`/1.0/identifiers/${did}`)
       expect(response.body.didDocument).toHaveProperty('verificationMethod')
     })
 
-    //    it('did:ethr:matic:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-    //      expect.assertions(1)
-    //      const did = 'did:ethr:matic:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-    //      const response = await request(app).get(`/1.0/identifiers/${did}`)
-    //      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    //    })
-    //
-    //    it('did:ethr:0x89:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-    //      expect.assertions(1)
-    //      const did = 'did:ethr:0x89:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-    //      const response = await request(app).get(`/1.0/identifiers/${did}`)
-    //      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    //    })
-    //
-    //    it('did:ethr:maticmum:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-    //      expect.assertions(1)
-    //      const did = 'did:ethr:maticmum:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-    //      const response = await request(app).get(`/1.0/identifiers/${did}`)
-    //      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    //    })
-    //
-    //    it('did:ethr:0x13881:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
-    //      expect.assertions(1)
-    //      const did = 'did:ethr:0x13881:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
-    //      const response = await request(app).get(`/1.0/identifiers/${did}`)
-    //      expect(response.body.didDocument).toHaveProperty('verificationMethod')
-    //    })
+    it.skip('did:ethr:maticmum:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+      expect.assertions(1)
+      const did = 'did:ethr:maticmum:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+      const response = await request(app).get(`/1.0/identifiers/${did}`)
+      expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    })
+
+    it.skip('did:ethr:0x13881:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
+      expect.assertions(1)
+      const did = 'did:ethr:0x13881:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736'
+      const response = await request(app).get(`/1.0/identifiers/${did}`)
+      expect(response.body.didDocument).toHaveProperty('verificationMethod')
+    })
 
     it('did:ethr:0x03c401:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736', async () => {
       expect.assertions(1)
