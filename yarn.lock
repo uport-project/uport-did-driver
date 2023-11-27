@@ -2468,9 +2468,9 @@ etag@~1.8.1:
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
 ethers@^6.8.1:
-  version "6.8.1"
-  resolved "https://registry.yarnpkg.com/ethers/-/ethers-6.8.1.tgz#ee2a1a39b5f62a13678f90ccd879175391d0a2b4"
-  integrity sha512-iEKm6zox5h1lDn6scuRWdIdFJUCGg3+/aQWu0F4K0GVyEZiktFkqrJbRjTn1FlYEPz7RKA707D6g5Kdk6j7Ljg==
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/ethers/-/ethers-6.9.0.tgz#a4534bdcdfde306aee94ef32f3d5c70d7e33fcb9"
+  integrity sha512-pmfNyQzc2mseLe91FnT2vmNaTt8dDzhxZ/xItAV7uGsF4dI4ek2ufMu3rAkgQETL/TIs0GS5A+U05g9QyWnv3Q==
   dependencies:
     "@adraffy/ens-normalize" "1.10.0"
     "@noble/curves" "1.2.0"
@@ -2481,9 +2481,9 @@ ethers@^6.8.1:
     ws "8.5.0"
 
 ethr-did-resolver@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-10.0.0.tgz#ab98b07bbdfd8083ffb32cef8044eef3bf6388c8"
-  integrity sha512-s0S6VMEsyskWGw4IbfUfW7KzpVl7tuiDQtwdrhBzdE1ftggu9RpnLOkOr4F5g5FmVAschu6I7CqVPlGFN4pSpw==
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-10.0.1.tgz#efb251a7a23aa69ed1e89c26e012d11d3736ac62"
+  integrity sha512-3h+5ULagRBgTfkBTkbPiC2quyJFvPJK3d8v7GdZ5UHkh0EbVmrRnc0btK4sfYbtLT6aiF9rgUO9UJpFLcFGYdw==
   dependencies:
     did-resolver "^4.1.0"
     ethers "^6.8.1"
