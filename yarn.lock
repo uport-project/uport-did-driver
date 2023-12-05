@@ -2481,9 +2481,9 @@ ethers@^6.8.1:
     ws "8.5.0"
 
 ethr-did-resolver@^10.0.0:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-10.0.1.tgz#efb251a7a23aa69ed1e89c26e012d11d3736ac62"
-  integrity sha512-3h+5ULagRBgTfkBTkbPiC2quyJFvPJK3d8v7GdZ5UHkh0EbVmrRnc0btK4sfYbtLT6aiF9rgUO9UJpFLcFGYdw==
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-10.1.0.tgz#b61466a66c01648af5085bbdfdd70249b9526992"
+  integrity sha512-PH3R8UQGpJGWXaVVSWPppPiEzb7eHrzG6yTCGtk23Fw8Et2totj+7V1id+zxCQvToM9cW+CHA/+k64F8xpk/Mw==
   dependencies:
     did-resolver "^4.1.0"
     ethers "^6.8.1"
