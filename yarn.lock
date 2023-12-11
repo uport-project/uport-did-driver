@@ -1204,10 +1204,10 @@
     micromatch "^4.0.0"
     p-reduce "^2.0.0"
 
-"@semantic-release/github@9.2.4":
-  version "9.2.4"
-  resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-9.2.4.tgz#0f8db03b44d6157b2d46d2c518c8242ea23f9fe5"
-  integrity sha512-VMzqiuSLhHc0/1Q8M/FmWnOaclh5aXL2pQWceldWBYSWLNzQu8GOR4bkGl57ciUtvm+MCMi4FaStZxSDJGEfUg==
+"@semantic-release/github@9.2.5":
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-9.2.5.tgz#69fd50759a2bb80dc1c38fded7f79e524a32c546"
+  integrity sha512-XWumFEOHiWllekymZjeVgkQCJ4YnD8020ZspAHYIIBNX8O4d/1ldeU5iNXu6NGkKlOCokyXh13KwVP0UEMm5kw==
   dependencies:
     "@octokit/core" "^5.0.0"
     "@octokit/plugin-paginate-rest" "^9.0.0"
@@ -1248,7 +1248,26 @@
     p-filter "^3.0.0"
     url-join "^5.0.0"
 
-"@semantic-release/npm@11.0.1", "@semantic-release/npm@^11.0.0":
+"@semantic-release/npm@11.0.2":
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/@semantic-release/npm/-/npm-11.0.2.tgz#6d50046df286572718484c9a66b2095277e2f650"
+  integrity sha512-owtf3RjyPvRE63iUKZ5/xO4uqjRpVQDUB9+nnXj0xwfIeM9pRl+cG+zGDzdftR4m3f2s4Wyf3SexW+kF5DFtWA==
+  dependencies:
+    "@semantic-release/error" "^4.0.0"
+    aggregate-error "^5.0.0"
+    execa "^8.0.0"
+    fs-extra "^11.0.0"
+    lodash-es "^4.17.21"
+    nerf-dart "^1.0.0"
+    normalize-url "^8.0.0"
+    npm "^10.0.0"
+    rc "^1.2.8"
+    read-pkg "^9.0.0"
+    registry-auth-token "^5.0.0"
+    semver "^7.1.2"
+    tempy "^3.0.0"
+
+"@semantic-release/npm@^11.0.0":
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/@semantic-release/npm/-/npm-11.0.1.tgz#125dc96670634cb0ac40f85230b2c016e482b993"
   integrity sha512-nFcT0pgVwpXsPkzjqP3ObH+pILeN1AbYscCDuYwgZEPZukL+RsGhrtdT4HA1Gjb/y1bVbE90JNtMIcgRi5z/Fg==
@@ -4826,10 +4845,10 @@ postcss-selector-parser@^6.0.10:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-prettier@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.1.0.tgz#c6d16474a5f764ea1a4a373c593b779697744d5e"
-  integrity sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==
+prettier@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.1.1.tgz#6ba9f23165d690b6cbdaa88cb0807278f7019848"
+  integrity sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==
 
 pretty-format@^29.7.0:
   version "29.7.0"
@@ -5125,10 +5144,10 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release@22.0.8:
-  version "22.0.8"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-22.0.8.tgz#13470a2af04e42fd767da278bcdddb0e91c8fb3f"
-  integrity sha512-55rb31jygqIYsGU/rY+gXXm2fnxBIWo9azOjxbqKsPnq7p70zwZ5v+xnD7TxJC+zvS3sy1eHLGXYWCaX3WI76A==
+semantic-release@22.0.10:
+  version "22.0.10"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-22.0.10.tgz#e1fbef4878a60cd350d036e286e5cfc752cff14d"
+  integrity sha512-4ahPaOX+0UYpYlosjc/tfCzB/cqlnjN0/xSKGryEC4bOpuYSkoK+QHw7xDPmAuiMNBBvkFD+m3aVMENUr++CIg==
   dependencies:
     "@semantic-release/commit-analyzer" "^11.0.0"
     "@semantic-release/error" "^4.0.0"
