@@ -1,3 +1,10 @@
+## [4.3.6](https://github.com/uport-project/uport-did-driver/compare/4.3.5...4.3.6) (2024-01-03)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency ethr-did-resolver to v10.1.2 ([1e9fa8c](https://github.com/uport-project/uport-did-driver/commit/1e9fa8c4f9a214e0fca3900cdf4b9c9f32b1c1a9))
+
 ## [4.3.5](https://github.com/uport-project/uport-did-driver/compare/4.3.4...4.3.5) (2023-12-20)
 
 
