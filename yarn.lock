@@ -15,10 +15,10 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@aviarytech/did-peer@^0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@aviarytech/did-peer/-/did-peer-0.0.19.tgz#5ac20d37d762f05be7a502826cb0fbb6cd319180"
-  integrity sha512-koSwVi++RIVWgYoNHHFZ95ouVqCNlLvqDfJfThOwExkZ2YSoRW/EFXeXFe33Gm7wR9gwTgoZXgi71hHO9d5RVQ==
+"@aviarytech/did-peer@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@aviarytech/did-peer/-/did-peer-0.0.22.tgz#d0c15062c37fc6bf2720d31dbbf9eb23e09c2435"
+  integrity sha512-BdA7L9wpYNLf1c3d0yB92aoj1AUWE10p408VZ4IJXfavb/oNxALZRRRJTcvMdrd5P2XXQsP5+x4bXfO24iRURg==
   dependencies:
     buffer "^6.0.3"
 
@@ -4798,13 +4798,13 @@ path-type@^5.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-5.0.0.tgz#14b01ed7aea7ddf9c7c3f46181d4d04f9c785bb8"
   integrity sha512-5HviZNaZcfqP95rwpv+1HDgUamezbqdSYTyzjTvwtJSnIH+3vnbmWsItli8OFEndS984VT55M3jduxZbX351gg==
 
-peer-did-resolver@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/peer-did-resolver/-/peer-did-resolver-1.0.1.tgz#15d5d490af6b8d595168a3d071385acbb54c542a"
-  integrity sha512-nbc8Y1L6IDqBTgWYx2OvIYJOjHAokdnVW2WzzYPaeIHM9YI6ovMGTbBct7nSLsbg/hBHc/w+tsvsn6kAcIxStQ==
+peer-did-resolver@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/peer-did-resolver/-/peer-did-resolver-2.0.0.tgz#81af5824a866c32e2600098a4125f833126001a1"
+  integrity sha512-4x6bv3fqEhGFJZI33S0pKLOYgE5Qynk5YLyZ+F828Nz1G4EnJuJBcz8uKaXqYhagVvAFD9Xd1dqtXlkyh2sNoA==
   dependencies:
-    "@aviarytech/did-peer" "^0.0.19"
-    did-resolver "^4.0.0"
+    "@aviarytech/did-peer" "^0.0.22"
+    did-resolver "^4.1.0"
 
 picocolors@^1.0.0:
   version "1.0.0"

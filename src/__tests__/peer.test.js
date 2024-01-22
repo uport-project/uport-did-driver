@@ -16,6 +16,21 @@ describe('did:peer driver', () => {
     })
   })
 
+  it('responds with didResolutionResult for "did:peer:2 with 2 service endpoints (github #119)', async () => {
+    expect.assertions(6)
+    const did =
+      'did:peer:2.Vz6Mkj3PUd1WjvaDhNZhhhXQdz5UnZXmS7ehtx8bsPpD47kKc.Ez6LSg8zQom395jKLrGiBNruB9MM6V8PWuf2FpEy4uRFiqQBR.SeyJ0IjoiZG0iLCJzIjp7InVyaSI6Imh0dHA6Ly9leGFtcGxlLmNvbS9kaWRjb21tIiwiYSI6WyJkaWRjb21tL3YyIl0sInIiOlsiZGlkOmV4YW1wbGU6MTIzNDU2Nzg5YWJjZGVmZ2hpI2tleS0xIl19fQ.SeyJ0IjoiZG0iLCJzIjp7InVyaSI6Imh0dHA6Ly9leGFtcGxlLmNvbS9hbm90aGVyIiwiYSI6WyJkaWRjb21tL3YyIl0sInIiOlsiZGlkOmV4YW1wbGU6MTIzNDU2Nzg5YWJjZGVmZ2hpI2tleS0yIl19fQ\n'
+    const response = await request(app).get(`/1.0/identifiers/${did}`)
+    expect(response.status).toBe(200)
+    expect(response.body).toHaveProperty('didDocument')
+    expect(response.body.didDocument).toHaveProperty('authentication')
+    expect(response.body.didDocument.service).toHaveLength(2)
+    expect(response.body).toHaveProperty('didDocumentMetadata')
+    expect(response.body.didResolutionMetadata).toEqual({
+      contentType: 'application/did+ld+json',
+    })
+  })
+
   it('responds with notFound error for unknown DID', async () => {
     // expect.assertions(1)
     const did = 'did:peer:fakefakefake'
