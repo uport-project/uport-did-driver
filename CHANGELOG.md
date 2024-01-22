@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/uport-project/uport-did-driver/compare/4.3.7...5.0.0) (2024-01-22)
+
+
+### Features
+
+* **deps:** bump peer-did-resolver to 2.0.0 and add test ([#121](https://github.com/uport-project/uport-did-driver/issues/121)) ([5e537dc](https://github.com/uport-project/uport-did-driver/commit/5e537dc2e9ce65262d202a1e31fdea45b887325d)), closes [#119](https://github.com/uport-project/uport-did-driver/issues/119)
+
+
+### BREAKING CHANGES
+
+* **deps:** The resolution of did:peer:2 identifiers now yields documents that use `Multikey` as the verification method `type`
+
 ## [4.3.7](https://github.com/uport-project/uport-did-driver/compare/4.3.6...4.3.7) (2024-01-13)
 
 
