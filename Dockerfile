@@ -1,4 +1,4 @@
-FROM node:21.6.1
+FROM node:21.6.2
 LABEL maintainer="Mircea NISTOR <mircea.nistor@mesh.xyz>"
 LABEL repository="git@github.com:uport-project/uport-did-driver.git"
 
