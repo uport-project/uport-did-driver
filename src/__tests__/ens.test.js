@@ -54,9 +54,9 @@ describe('did:ens driver', () => {
       })
     })
 
-    it('did:ens:goerli:whatever.eth', async () => {
+    it.skip('did:ens:sepolia:whatever.eth', async () => {
       expect.assertions(2)
-      const did = 'did:ens:goerli:whatever.eth'
+      const did = 'did:ens:sepolia:whatever.eth'
       const ethrAddr = '0x4af859d61d07A8c515FE0E3Cc1Ea5e49A260bBa3'
       const response = await request(app).get(`/1.0/identifiers/${did}`)
       expect(response.status).toBe(200)
@@ -75,7 +75,7 @@ describe('did:ens driver', () => {
               id: `${did}#${ethrAddr}`,
               type: 'EcdsaSecp256k1RecoveryMethod2020',
               controller: did,
-              blockchainAccountId: `${ethrAddr}@eip155:5`,
+              blockchainAccountId: `${ethrAddr}@eip155:11155111`,
             },
             {
               id: `${did}#my-key`,

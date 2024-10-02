@@ -2,9 +2,9 @@ import app from '../app.js'
 import request from 'supertest'
 
 describe('did:web driver', () => {
-  it('responds with didResolutionResult for did:web:did.actor:alice', async () => {
+  it('responds with didResolutionResult for did:web:skounis.github.io', async () => {
     expect.assertions(5)
-    const did = 'did:web:did.actor:alice'
+    const did = 'did:web:skounis.github.io'
     const response = await request(app).get(`/1.0/identifiers/${did}`)
     expect(response.status).toBe(200)
     expect(response.body).toHaveProperty('didDocument')
