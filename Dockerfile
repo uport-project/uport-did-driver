@@ -1,5 +1,5 @@
 FROM node:21.6.2
-LABEL maintainer="Mircea NISTOR <mircea.nistor@mesh.xyz>"
+LABEL maintainer="Mircea NISTOR <mircea.nistor@consensys.net>"
 LABEL repository="git@github.com:uport-project/uport-did-driver.git"
 
 USER root
