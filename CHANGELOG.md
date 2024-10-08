@@ -1,3 +1,10 @@
+## [5.0.4](https://github.com/uport-project/uport-did-driver/compare/5.0.3...5.0.4) (2024-10-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency express to v4.21.1 ([8fee948](https://github.com/uport-project/uport-did-driver/commit/8fee94805afac104a7f95c7815e4e7899fe6b0cc))
+
 ## [5.0.3](https://github.com/uport-project/uport-did-driver/compare/5.0.2...5.0.3) (2024-10-02)
 
 
