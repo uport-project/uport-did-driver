@@ -1,3 +1,10 @@
+## [5.0.5](https://github.com/uport-project/uport-did-driver/compare/5.0.4...5.0.5) (2024-10-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ethers to v6.13.4 ([4f1dc6b](https://github.com/uport-project/uport-did-driver/commit/4f1dc6bf75fe41af8e154f0229ed698c275fab28))
+
 ## [5.0.4](https://github.com/uport-project/uport-did-driver/compare/5.0.3...5.0.4) (2024-10-08)
 
 
