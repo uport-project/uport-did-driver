@@ -2358,12 +2358,12 @@ cross-env@7.0.3:
   dependencies:
     cross-spawn "^7.0.1"
 
-cross-fetch@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-4.0.0.tgz#f037aef1580bb3a1a35164ea2a848ba81b445983"
-  integrity sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==
+cross-fetch@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-4.1.0.tgz#8f69355007ee182e47fa692ecbaa37a52e43c3d2"
+  integrity sha512-uKm5PU+MHTootlWEY+mZ4vvXoCn4fLQxT9dSc1sXVMSFkINTJVN8cAQROpwcKm8bJ/c7rgZVIBWzH5T78sNZZw==
   dependencies:
-    node-fetch "^2.6.12"
+    node-fetch "^2.7.0"
 
 cross-spawn@^7.0.0, cross-spawn@^7.0.1, cross-spawn@^7.0.3:
   version "7.0.3"
@@ -2680,9 +2680,9 @@ ethers@^6.13.3, ethers@^6.8.1:
     ws "8.17.1"
 
 ethr-did-resolver@^11.0.1:
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-11.0.2.tgz#e3b95323120300c23c50d13a3bf069686a5b8692"
-  integrity sha512-xvJqOX0M23LjiDs3gusHMMHP9U0N0ZwBesmABzci5XzPJOk52MgCygfRx09PZLrVsoZVEjValmHJBle3vPrtmQ==
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-11.0.5.tgz#24cc01cbdb6c878c26d83be5d8a140488f680611"
+  integrity sha512-fTQ+4g4aRDyU1hzlPH6FYgpoOd7fM8ZV9+3JCl2PqSDnS8Iz9V+y/9KOjLzqhY6LKhMWW5hIbaGypwOPWj15JA==
   dependencies:
     did-resolver "^4.1.0"
     ethers "^6.8.1"
@@ -4603,7 +4603,7 @@ node-emoji@^2.2.0:
     emojilib "^2.4.0"
     skin-tone "^2.0.0"
 
-node-fetch@^2.6.12:
+node-fetch@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
   integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
@@ -6108,7 +6108,7 @@ toidentifier@~1.0.1:
 
 tr46@~0.0.3:
   version "0.0.3"
-  resolved "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz"
+  resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
 
 traverse@~0.6.6:
@@ -6292,21 +6292,21 @@ walker@^1.0.8:
     makeerror "1.0.12"
 
 web-did-resolver@^2.0.27:
-  version "2.0.27"
-  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.27.tgz#21884a41d64c2042c307acb2d6e2061244e09806"
-  integrity sha512-YxQlNdeYBXLhVpMW62+TPlc6sSOiWyBYq7DNvY6FXmXOD9g0zLeShpq2uCKFFQV/WlSrBi/yebK/W5lMTDxMUQ==
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.32.tgz#6c86c1797cd651620aa311a94660e0a51131b334"
+  integrity sha512-L91/ApTmDjgzS0UDstTKn3kN/1hlQBnVcUN8K29e3xhVBpPktHYC6uvVAQ8ohbIg9D6wrrbaBQvfRArDxgJG2g==
   dependencies:
-    cross-fetch "^4.0.0"
-    did-resolver "^4.0.0"
+    cross-fetch "^4.1.0"
+    did-resolver "^4.1.0"
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
-  resolved "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
   integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
 
 whatwg-url@^5.0.0:
   version "5.0.0"
-  resolved "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
   integrity sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==
   dependencies:
     tr46 "~0.0.3"
