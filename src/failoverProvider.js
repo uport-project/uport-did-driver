@@ -20,8 +20,7 @@ function isHistoricalBlockRange(params) {
   const filter = params?.[0]
   if (!filter) return false
   const toBlock = filter.toBlock
-  if (!toBlock || toBlock === 'latest' || toBlock === 'pending' || toBlock === 'earliest') return false
-  return true
+  return !(!toBlock || toBlock === 'latest' || toBlock === 'pending' || toBlock === 'earliest')
 }
 
 export class FailoverProvider extends JsonRpcProvider {

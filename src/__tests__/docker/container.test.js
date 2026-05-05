@@ -1,4 +1,5 @@
 import { execSync, spawn } from 'child_process'
+import { afterAll, beforeAll, describe, expect, it } from '@jest/globals'
 
 const IMAGE = 'uport-did-driver-test:latest'
 const CONTAINER = 'uport-did-driver-test'
@@ -49,10 +50,15 @@ beforeAll(async () => {
   console.log('\n[docker] Building image...')
   execSync(`docker build -t ${IMAGE} .`, { stdio: 'inherit' })
 
-  try { execSync(`docker rm -f ${CONTAINER}`, { stdio: 'ignore' }) } catch (_) {}
+  try {
+    execSync(`docker rm -f ${CONTAINER}`, { stdio: 'ignore' })
+  } catch (_) {}
 
   console.log('[docker] Starting container...')
-  spawn('docker', ['run', '--rm', '--name', CONTAINER, '-p', `${PORT}:8081`, IMAGE], { stdio: 'ignore', detach: true })
+  spawn('docker', ['run', '--rm', '--name', CONTAINER, '-p', `${PORT}:8081`, IMAGE], {
+    stdio: 'ignore',
+    detach: true,
+  })
 
   console.log('[docker] Waiting for container to be ready...')
   await waitForReady(`${BASE_URL}/health`)
@@ -61,7 +67,9 @@ beforeAll(async () => {
 
 afterAll(() => {
   console.log('\n[docker] Stopping container...')
-  try { execSync(`docker stop ${CONTAINER}`, { stdio: 'ignore' }) } catch (_) {}
+  try {
+    execSync(`docker stop ${CONTAINER}`, { stdio: 'ignore' })
+  } catch (_) {}
 })
 
 describe('docker container', () => {

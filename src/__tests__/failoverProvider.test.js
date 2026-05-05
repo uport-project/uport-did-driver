@@ -1,4 +1,4 @@
-import { describe, it, expect, jest, beforeEach } from '@jest/globals'
+import { describe, it, expect, jest } from '@jest/globals'
 import { FailoverProvider } from '../failoverProvider.js'
 
 // Minimal mock for a JsonRpcProvider — only `send` matters
