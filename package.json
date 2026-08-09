@@ -31,7 +31,7 @@
     "did-resolver": "^5.0.0",
     "ens-did-resolver": "^1.0.4",
     "ethers": "^6.13.3",
-    "ethr-did-resolver": "^11.0.1",
+    "ethr-did-resolver": "^14.0.0",
     "express": "^4.21.0",
     "express-actuator": "^1.8.4",
     "peer-did-resolver": "^2.0.0",
