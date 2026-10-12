@@ -28,15 +28,15 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "did-resolver": "^5.0.0",
+    "did-resolver": "^6.0.0",
     "ens-did-resolver": "^1.0.4",
     "ethers": "^6.13.3",
-    "ethr-did-resolver": "^11.0.1",
+    "ethr-did-resolver": "^14.0.0",
     "express": "^4.21.0",
     "express-actuator": "^1.8.4",
     "peer-did-resolver": "^2.0.0",
     "plc-did-resolver": "^1.0.0",
-    "web-did-resolver": "^2.0.27"
+    "web-did-resolver": "^3.0.0"
   },
   "devDependencies": {
     "@jest/globals": "30.2.0",
